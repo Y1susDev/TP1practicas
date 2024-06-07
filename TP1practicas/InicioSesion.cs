@@ -21,8 +21,8 @@ namespace TP1practicas
 
         private void lnkolvidocontraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RecuperoContraseña recuperoContraseña = new RecuperoContraseña();
-            recuperoContraseña.Show();
+            RecuperoContraseña v2 = new RecuperoContraseña();
+            v2.Show();
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
