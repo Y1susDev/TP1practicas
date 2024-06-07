@@ -52,7 +52,7 @@ namespace TP1practicas
         private void lnkOlvidoUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RecuperoContraseña v3 = new RecuperoContraseña();
-            v3.Show();
+            v3.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)

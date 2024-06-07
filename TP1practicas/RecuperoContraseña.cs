@@ -66,6 +66,8 @@ namespace TP1practicas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            InicioSesion v4 = new InicioSesion();
+            v4.ShowDialog();
 
         }
 }

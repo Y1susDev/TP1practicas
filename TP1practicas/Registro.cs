@@ -43,6 +43,8 @@ namespace TP1practicas
         
 private void btnInicioSesion_Click(object sender, EventArgs e)
         {
+            InicioSesion v5 = new InicioSesion();
+            v5.ShowDialog();
 
         }
     }
