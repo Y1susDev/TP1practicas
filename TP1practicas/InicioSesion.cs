@@ -22,7 +22,7 @@ namespace TP1practicas
         private void lnkolvidocontraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RecuperoContraseña v2 = new RecuperoContraseña();
-            v2.Show();
+            v2.ShowDialog();
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -65,6 +65,8 @@ namespace TP1practicas
             FrmRegistro v1 = new FrmRegistro();
             v1.ShowDialog();
         }
+    
+
         
     }
     
