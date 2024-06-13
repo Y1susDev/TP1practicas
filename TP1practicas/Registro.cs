@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,9 +14,12 @@ namespace TP1practicas
 {
     public partial class FrmRegistro : Form
     {
+
+        // CREAMOS LISTA PERSONAS
         public FrmRegistro()
         {
             InitializeComponent();
+            //INICIALIZAMOS LA LISTA
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
@@ -37,11 +41,10 @@ namespace TP1practicas
                 lblLeyenda.Text = ("Carga exitosa");
             }
             lblLeyenda.Visible = true;
-
+            //CARGAMOS LA LISTA
         }
 
-        
-private void btnInicioSesion_Click(object sender, EventArgs e)
+        private void btnInicioSesion_Click(object sender, EventArgs e)
         {
             InicioSesion v5 = new InicioSesion();
             v5.ShowDialog();
