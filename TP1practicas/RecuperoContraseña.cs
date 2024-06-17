@@ -46,17 +46,12 @@ namespace TP1practicas
 
         private void btnIngresarCodigo_Click(object sender, EventArgs e)
         {
-            string codigo = txtCodigoIngreso.Text;
+            if (!mskCodigoEnviado.MaskFull)
+            {
+                MessageBox.Show("¡Se ha restablecido su usuario/contraseña exitosamente!",
+                    "Reestablemiento usuario/contraseña",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
-            if (string.IsNullOrEmpty(codigo))
-            {
-                lblLeyenda2.Text = ("ingrese un codigo");
-            }
-            else
-            {
-                lblLeyenda2.Text = ("se ha reestablecido su usuario y contraseña, vuelva al menu de inicio de sesion e ingrese nuevamente");
-            }
-            lblLeyenda2.Visible = true;
         }
 
         private void lblRecContraseña_Click(object sender, EventArgs e)
@@ -147,6 +142,16 @@ namespace TP1practicas
         }
 
         private void mskDNI_MaskInputRejected(object sender, MaskInputRejectedEventArgs DniKey)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void lblLeyenda2_Click(object sender, EventArgs e)
         {
 
         }
