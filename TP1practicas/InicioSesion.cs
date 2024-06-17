@@ -40,11 +40,11 @@ namespace TP1practicas
         {
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text))
             {
-                lblLeyenda.Text = ("debe completar todos los campos");
+                lblLeyenda.Text = ("Debe completar todos los campos");
             }
             else 
             {
-                lblLeyenda.Text = ("inicio de sesion exitoso");
+                lblLeyenda.Text = ("Inicio de sesión exitoso");
             }
             lblLeyenda.Visible = true;        
         }
@@ -65,9 +65,16 @@ namespace TP1practicas
             FrmRegistro v1 = new FrmRegistro();
             v1.ShowDialog();
         }
-    
 
-        
+        private void lblTexto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InicioSesion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

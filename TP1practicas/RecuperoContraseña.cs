@@ -28,20 +28,20 @@ namespace TP1practicas
 
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
-            string fechanac = txtFechaNac.Text;
-            string dni = txtDni.Text;
+            string fechanac = mskFechaNacimiento.Text;
+            string dni = mskDNI.Text;
 
             if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(fechanac) || string.IsNullOrEmpty(dni))
-            { 
-                lblLeyenda.Text = ("debe completar todos los campos, revise si no quedaron campos incompletos o vacios y completelos");
-            }
-            else 
             {
-                lblLeyenda.Text = ("revise su correo electronico e ingrese a continuacion el codigo que se le envio"); 
+                lblLeyenda.Text = ("Debe completar todos los campos");
+            }
+            else
+            {
+                lblLeyenda.Text = ("Revise su correo electrónico e ingrese a continuación el código que se le envió");
             }
 
 
-                    lblLeyenda.Visible = true;
+            lblLeyenda.Visible = true;
         }
 
         private void btnIngresarCodigo_Click(object sender, EventArgs e)
@@ -70,6 +70,61 @@ namespace TP1practicas
             v4.ShowDialog();
 
         }
-}
+
+        private void RecuperoContraseña_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDni_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFechaNac_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFechaNac_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFechaNac_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellidoKey(object sender, KeyPressEventArgs ApellidoKey)
+        {
+            if (Char.IsLetter(ApellidoKey.KeyChar))
+            {
+                ApellidoKey.Handled = false;
+            }
+            else if (Char.IsSeparator(ApellidoKey.KeyChar))
+            {
+                ApellidoKey.Handled = false;
+            }
+            else if (Char.IsControl(ApellidoKey.KeyChar))
+            {
+                ApellidoKey.Handled = false;
+            }
+            else
+            {
+                ApellidoKey.Handled = true;
+            }
+        }
+
+        private void txtNombreKey(object sender, KeyPressEventArgs e)
+        {
+
+        }
+    }
 }            
         
