@@ -34,6 +34,7 @@ namespace TP1practicas
             {
                 lblLeyenda.Text = ("Un código ha sido enviado a su correo electrónico");
                 mskCodigoEnviado.Enabled = true;
+                btnIngresarCodigo.Enabled = true;
             }
 
             lblLeyenda.Visible = true;
@@ -44,8 +45,10 @@ namespace TP1practicas
             if (mskCodigoEnviado.MaskFull)
             {
                 MessageBox.Show("¡Se ha restablecido su usuario/contraseña exitosamente!",
-                    "Reestablemiento usuario/contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else MessageBox.Show("¡Complete el campo !",
+                    "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -56,8 +59,6 @@ namespace TP1practicas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InicioSesion iniciosesion = new InicioSesion();
-            iniciosesion.ShowDialog();
 
         }
 
@@ -153,10 +154,19 @@ namespace TP1practicas
 
         private void mskCodigoEnviado_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            if (mskCodigoEnviado.MaskFull)
-            {
-                btnIngresarCodigo.Enabled = true;
-            }
+
+        }
+
+        private void lblInicieSesion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar2_Click(object sender, EventArgs e)
+        {
+            InicioSesion iniciosesion = new InicioSesion();
+            iniciosesion.Show();
+            this.Close();
         }
     }
 }            

@@ -22,7 +22,8 @@ namespace TP1practicas
         private void lnkolvidocontraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RecuperoContraseña recuperocontra = new RecuperoContraseña();
-            recuperocontra.ShowDialog();
+            recuperocontra.Show();
+            this.Hide();
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace TP1practicas
             }
             else 
             {
-                lblLeyenda.Text = ("Inicio de sesión exitoso");
+                MessageBox.Show("Inicio de sesión exitoso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             lblLeyenda.Visible = true;        
         }
@@ -77,6 +78,21 @@ namespace TP1practicas
         }
 
         private void lnkOlvidoUsuario_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
