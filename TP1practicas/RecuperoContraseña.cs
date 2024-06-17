@@ -31,7 +31,7 @@ namespace TP1practicas
             string fechanac = mskFechaNacimiento.Text;
             string dni = mskDNI.Text;
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(fechanac) || string.IsNullOrEmpty(dni))
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || !mskFechaNacimiento.MaskFull || !mskDNI.MaskFull)
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
             }
@@ -121,7 +121,32 @@ namespace TP1practicas
             }
         }
 
-        private void txtNombreKey(object sender, KeyPressEventArgs e)
+        private void txtNombreKey(object sender, KeyPressEventArgs NombreKey)
+        {
+            if (Char.IsLetter(NombreKey.KeyChar))
+            {
+                NombreKey.Handled = false;
+            }
+            else if (Char.IsSeparator(NombreKey.KeyChar))
+            {
+                NombreKey.Handled = false;
+            }
+            else if (Char.IsControl(NombreKey.KeyChar))
+            {
+                NombreKey.Handled = false;
+            }
+            else
+            {
+                NombreKey.Handled = true;
+            }
+        }
+
+        private void mskFechaNacimiento_MaskInputRejected(object sender, MaskInputRejectedEventArgs FechaNacKey)
+        {
+
+        }
+
+        private void mskDNI_MaskInputRejected(object sender, MaskInputRejectedEventArgs DniKey)
         {
 
         }

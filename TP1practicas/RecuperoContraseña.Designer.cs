@@ -53,7 +53,7 @@
             this.btnEnviarCodigo.Name = "btnEnviarCodigo";
             this.btnEnviarCodigo.Size = new System.Drawing.Size(244, 36);
             this.btnEnviarCodigo.TabIndex = 21;
-            this.btnEnviarCodigo.Text = "Enviar codigo";
+            this.btnEnviarCodigo.Text = "Enviar código";
             this.btnEnviarCodigo.UseVisualStyleBackColor = true;
             this.btnEnviarCodigo.Click += new System.EventHandler(this.btnEnviarCodigo_Click);
             // 
@@ -199,19 +199,21 @@
             this.mskDNI.Location = new System.Drawing.Point(532, 180);
             this.mskDNI.Mask = "00.000.000";
             this.mskDNI.Name = "mskDNI";
-            this.mskDNI.Size = new System.Drawing.Size(79, 22);
+            this.mskDNI.Size = new System.Drawing.Size(97, 22);
             this.mskDNI.TabIndex = 45;
             this.mskDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mskDNI.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskDNI_MaskInputRejected);
             // 
             // mskFechaNacimiento
             // 
             this.mskFechaNacimiento.Location = new System.Drawing.Point(532, 147);
             this.mskFechaNacimiento.Mask = "00/00/0000";
             this.mskFechaNacimiento.Name = "mskFechaNacimiento";
-            this.mskFechaNacimiento.Size = new System.Drawing.Size(79, 22);
+            this.mskFechaNacimiento.Size = new System.Drawing.Size(97, 22);
             this.mskFechaNacimiento.TabIndex = 46;
             this.mskFechaNacimiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskFechaNacimiento.ValidatingType = typeof(System.DateTime);
+            this.mskFechaNacimiento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskFechaNacimiento_MaskInputRejected);
             // 
             // RecuperoContraseña
             // 
