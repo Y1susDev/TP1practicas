@@ -21,8 +21,8 @@ namespace TP1practicas
 
         private void lnkolvidocontraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RecuperoContraseña v2 = new RecuperoContraseña();
-            v2.ShowDialog();
+            RecuperoContraseña recuperocontra = new RecuperoContraseña();
+            recuperocontra.ShowDialog();
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -72,6 +72,11 @@ namespace TP1practicas
         }
 
         private void InicioSesion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lnkOlvidoUsuario_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }

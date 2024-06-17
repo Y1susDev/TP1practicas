@@ -35,7 +35,6 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblTexto = new System.Windows.Forms.Label();
             this.lnkolvidocontraseña = new System.Windows.Forms.LinkLabel();
-            this.lnkOlvidoUsuario = new System.Windows.Forms.LinkLabel();
             this.lnkCrearCuenta = new System.Windows.Forms.LinkLabel();
             this.lblLeyenda = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -43,7 +42,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Location = new System.Drawing.Point(130, 203);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(195, 34);
             this.btnIngresar.TabIndex = 30;
@@ -54,7 +53,7 @@
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(175, 118);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(217, 22);
@@ -64,7 +63,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(175, 85);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(217, 22);
             this.txtUsuario.TabIndex = 26;
@@ -104,37 +103,25 @@
             // lnkolvidocontraseña
             // 
             this.lnkolvidocontraseña.AutoSize = true;
-            this.lnkolvidocontraseña.Location = new System.Drawing.Point(151, 266);
+            this.lnkolvidocontraseña.Location = new System.Drawing.Point(127, 304);
             this.lnkolvidocontraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkolvidocontraseña.Name = "lnkolvidocontraseña";
-            this.lnkolvidocontraseña.Size = new System.Drawing.Size(133, 16);
+            this.lnkolvidocontraseña.Size = new System.Drawing.Size(181, 16);
             this.lnkolvidocontraseña.TabIndex = 32;
             this.lnkolvidocontraseña.TabStop = true;
-            this.lnkolvidocontraseña.Text = "Olvide mi contraseña";
+            this.lnkolvidocontraseña.Text = "Olvide mi contraseña/usuario";
             this.lnkolvidocontraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkolvidocontraseña_LinkClicked);
-            // 
-            // lnkOlvidoUsuario
-            // 
-            this.lnkOlvidoUsuario.AutoSize = true;
-            this.lnkOlvidoUsuario.Location = new System.Drawing.Point(163, 304);
-            this.lnkOlvidoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lnkOlvidoUsuario.Name = "lnkOlvidoUsuario";
-            this.lnkOlvidoUsuario.Size = new System.Drawing.Size(110, 16);
-            this.lnkOlvidoUsuario.TabIndex = 33;
-            this.lnkOlvidoUsuario.TabStop = true;
-            this.lnkOlvidoUsuario.Text = "Olvide mi usuario";
-            this.lnkOlvidoUsuario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkOlvidoUsuario_LinkClicked);
             // 
             // lnkCrearCuenta
             // 
             this.lnkCrearCuenta.AutoSize = true;
-            this.lnkCrearCuenta.Location = new System.Drawing.Point(127, 341);
+            this.lnkCrearCuenta.Location = new System.Drawing.Point(165, 335);
             this.lnkCrearCuenta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkCrearCuenta.Name = "lnkCrearCuenta";
-            this.lnkCrearCuenta.Size = new System.Drawing.Size(182, 16);
+            this.lnkCrearCuenta.Size = new System.Drawing.Size(108, 16);
             this.lnkCrearCuenta.TabIndex = 34;
             this.lnkCrearCuenta.TabStop = true;
-            this.lnkCrearCuenta.Text = "Soy nuevo / Crear una cuenta";
+            this.lnkCrearCuenta.Text = "Crear una cuenta";
             this.lnkCrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCrearCuenta_LinkClicked);
             // 
             // lblLeyenda
@@ -155,7 +142,6 @@
             this.ClientSize = new System.Drawing.Size(440, 373);
             this.Controls.Add(this.lblLeyenda);
             this.Controls.Add(this.lnkCrearCuenta);
-            this.Controls.Add(this.lnkOlvidoUsuario);
             this.Controls.Add(this.lnkolvidocontraseña);
             this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.btnIngresar);
@@ -163,7 +149,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lblUsuario);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InicioSesion";
             this.Text = "InicioSesion";
             this.Load += new System.EventHandler(this.InicioSesion_Load);
@@ -181,7 +167,6 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblTexto;
         private System.Windows.Forms.LinkLabel lnkolvidocontraseña;
-        private System.Windows.Forms.LinkLabel lnkOlvidoUsuario;
         private System.Windows.Forms.LinkLabel lnkCrearCuenta;
         private System.Windows.Forms.Label lblLeyenda;
     }

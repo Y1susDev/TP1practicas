@@ -26,30 +26,25 @@ namespace TP1practicas
         private void btnEnviarCodigo_Click(object sender, EventArgs e)
         {
 
-            string nombre = txtNombre.Text;
-            string apellido = txtApellido.Text;
-            string fechanac = mskFechaNacimiento.Text;
-            string dni = mskDNI.Text;
-
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || !mskFechaNacimiento.MaskFull || !mskDNI.MaskFull)
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text) || !mskFechaNacimiento.MaskFull || !mskDNI.MaskFull)
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
             }
             else
             {
-                lblLeyenda.Text = ("Revise su correo electrónico e ingrese a continuación el código que se le envió");
+                lblLeyenda.Text = ("Un código ha sido enviado a su correo electrónico");
+                mskCodigoEnviado.Enabled = true;
             }
-
 
             lblLeyenda.Visible = true;
         }
 
         private void btnIngresarCodigo_Click(object sender, EventArgs e)
         {
-            if (!mskCodigoEnviado.MaskFull)
+            if (mskCodigoEnviado.MaskFull)
             {
                 MessageBox.Show("¡Se ha restablecido su usuario/contraseña exitosamente!",
-                    "Reestablemiento usuario/contraseña",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "Reestablemiento usuario/contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -61,8 +56,8 @@ namespace TP1practicas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InicioSesion v4 = new InicioSesion();
-            v4.ShowDialog();
+            InicioSesion iniciosesion = new InicioSesion();
+            iniciosesion.ShowDialog();
 
         }
 
@@ -146,14 +141,22 @@ namespace TP1practicas
 
         }
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void lblLeyenda2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblLeyenda2_Click(object sender, EventArgs e)
+        private void lblLeyenda_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mskCodigoEnviado_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            if (mskCodigoEnviado.MaskFull)
+            {
+                btnIngresarCodigo.Enabled = true;
+            }
         }
     }
 }            

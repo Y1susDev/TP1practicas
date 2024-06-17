@@ -47,7 +47,7 @@
             // 
             // btnEnviarCodigo
             // 
-            this.btnEnviarCodigo.Location = new System.Drawing.Point(432, 224);
+            this.btnEnviarCodigo.Location = new System.Drawing.Point(439, 225);
             this.btnEnviarCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviarCodigo.Name = "btnEnviarCodigo";
             this.btnEnviarCodigo.Size = new System.Drawing.Size(244, 36);
@@ -133,7 +133,8 @@
             // 
             // btnIngresarCodigo
             // 
-            this.btnIngresarCodigo.Location = new System.Drawing.Point(432, 394);
+            this.btnIngresarCodigo.Enabled = false;
+            this.btnIngresarCodigo.Location = new System.Drawing.Point(439, 393);
             this.btnIngresarCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresarCodigo.Name = "btnIngresarCodigo";
             this.btnIngresarCodigo.Size = new System.Drawing.Size(244, 36);
@@ -145,7 +146,7 @@
             // button1
             // 
             this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button1.Location = new System.Drawing.Point(432, 453);
+            this.button1.Location = new System.Drawing.Point(439, 452);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(244, 36);
@@ -157,12 +158,14 @@
             // lblLeyenda
             // 
             this.lblLeyenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblLeyenda.Location = new System.Drawing.Point(366, 284);
+            this.lblLeyenda.Location = new System.Drawing.Point(366, 285);
             this.lblLeyenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLeyenda.Name = "lblLeyenda";
-            this.lblLeyenda.Size = new System.Drawing.Size(371, 34);
+            this.lblLeyenda.Size = new System.Drawing.Size(388, 34);
             this.lblLeyenda.TabIndex = 42;
+            this.lblLeyenda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblLeyenda.Visible = false;
+            this.lblLeyenda.Click += new System.EventHandler(this.lblLeyenda_Click);
             // 
             // lblIngreseCodigo
             // 
@@ -176,7 +179,7 @@
             // 
             // mskDNI
             // 
-            this.mskDNI.Location = new System.Drawing.Point(537, 181);
+            this.mskDNI.Location = new System.Drawing.Point(599, 181);
             this.mskDNI.Mask = "00.000.000";
             this.mskDNI.Name = "mskDNI";
             this.mskDNI.Size = new System.Drawing.Size(97, 22);
@@ -186,7 +189,7 @@
             // 
             // mskFechaNacimiento
             // 
-            this.mskFechaNacimiento.Location = new System.Drawing.Point(537, 148);
+            this.mskFechaNacimiento.Location = new System.Drawing.Point(599, 148);
             this.mskFechaNacimiento.Mask = "00/00/0000";
             this.mskFechaNacimiento.Name = "mskFechaNacimiento";
             this.mskFechaNacimiento.Size = new System.Drawing.Size(97, 22);
@@ -197,13 +200,14 @@
             // 
             // mskCodigoEnviado
             // 
-            this.mskCodigoEnviado.Location = new System.Drawing.Point(537, 344);
+            this.mskCodigoEnviado.Enabled = false;
+            this.mskCodigoEnviado.Location = new System.Drawing.Point(599, 344);
             this.mskCodigoEnviado.Mask = "00000";
             this.mskCodigoEnviado.Name = "mskCodigoEnviado";
             this.mskCodigoEnviado.Size = new System.Drawing.Size(97, 22);
             this.mskCodigoEnviado.TabIndex = 47;
             this.mskCodigoEnviado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mskCodigoEnviado.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.mskCodigoEnviado.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCodigoEnviado_MaskInputRejected);
             // 
             // RecuperoContraseña
             // 
