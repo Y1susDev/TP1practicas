@@ -20,12 +20,14 @@ namespace TP1practicas
         {
             InitializeComponent();
             //INICIALIZAMOS LA LISTA
-            Icon icono = new Icon(Application.StartupPath + @"\Iconos\herramienta.ico");
-            this.Icon = icono;
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
+            string hombre = rdbHombre.Text;
+            string mujer = rdbMujer.Text;
+            string Otro = rdbOtro.Text;
+            DialogResult Resultado;
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
             string fechanacimiento = mskFechaNac.Text;
@@ -34,13 +36,23 @@ namespace TP1practicas
             string contraseña1 = txtContraseña1.Text;
             string contraseña2 = txtContraseña2.Text;
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(fechanacimiento) || string.IsNullOrEmpty(dni) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(contraseña1) || string.IsNullOrEmpty(contraseña2))
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text) ||
+                !mskFechaNac.MaskCompleted || !mskDni.MaskCompleted || string.IsNullOrEmpty(txtEmail.Text)
+                || string.IsNullOrEmpty(txtContraseña1.Text) || string.IsNullOrEmpty(txtContraseña2.Text) ||
+                !rdbHombre.Checked && !rdbMujer.Checked && !rdbOtro.Checked)
             {
                 lblLeyenda.Text = ("Complete todos los campos");
             }
             else
             {
-                MessageBox.Show("¡Se cuenta se ha creado exitosamente!","", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNombre.Clear(); txtApellido.Clear(); mskFechaNac.Clear(); mskDni.Clear(); txtEmail.Clear(); txtContraseña1.Clear(); txtContraseña2.Clear();
+                Resultado = MessageBox.Show("¡Su cuenta se ha creado exitosamente! \n Presione Aceptar para volver al menú", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (Resultado == DialogResult.OK)
+                {
+                    InicioSesion iniciosesion = new InicioSesion();
+                    iniciosesion.Show();
+                    this.Close();
+                }
             }
             lblLeyenda.Visible = true;
             //CARGAMOS LA LISTA
@@ -136,6 +148,11 @@ namespace TP1practicas
         {
             pcbMostrar1.BringToFront();
             txtContraseña2.PasswordChar = '*';
+        }
+
+        private void grpGenero_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

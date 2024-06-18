@@ -52,10 +52,15 @@
             this.lblLeyenda = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.grpGenero = new System.Windows.Forms.GroupBox();
+            this.rdbHombre = new System.Windows.Forms.RadioButton();
+            this.rdbMujer = new System.Windows.Forms.RadioButton();
+            this.rdbOtro = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar1)).BeginInit();
+            this.grpGenero.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDni
@@ -114,7 +119,7 @@
             this.txtContraseña2.Name = "txtContraseña2";
             this.txtContraseña2.PasswordChar = '*';
             this.txtContraseña2.Size = new System.Drawing.Size(181, 30);
-            this.txtContraseña2.TabIndex = 39;
+            this.txtContraseña2.TabIndex = 7;
             // 
             // txtContraseña1
             // 
@@ -124,7 +129,7 @@
             this.txtContraseña1.Name = "txtContraseña1";
             this.txtContraseña1.PasswordChar = '*';
             this.txtContraseña1.Size = new System.Drawing.Size(181, 30);
-            this.txtContraseña1.TabIndex = 38;
+            this.txtContraseña1.TabIndex = 6;
             // 
             // txtEmail
             // 
@@ -133,7 +138,7 @@
             this.txtEmail.Location = new System.Drawing.Point(279, 237);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(217, 30);
-            this.txtEmail.TabIndex = 37;
+            this.txtEmail.TabIndex = 5;
             // 
             // lblContraseña2
             // 
@@ -155,9 +160,9 @@
             this.lblEmail.Location = new System.Drawing.Point(43, 240);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(3);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(162, 25);
+            this.lblEmail.Size = new System.Drawing.Size(171, 25);
             this.lblEmail.TabIndex = 35;
-            this.lblEmail.Text = "Ingrese un e-mail";
+            this.lblEmail.Text = "Correo electrónico\r\n";
             // 
             // lblContraseña1
             // 
@@ -179,7 +184,7 @@
             this.mskFechaNac.Mask = "00/00/0000";
             this.mskFechaNac.Name = "mskFechaNac";
             this.mskFechaNac.Size = new System.Drawing.Size(97, 30);
-            this.mskFechaNac.TabIndex = 44;
+            this.mskFechaNac.TabIndex = 3;
             this.mskFechaNac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskFechaNac.ValidatingType = typeof(System.DateTime);
             // 
@@ -190,7 +195,7 @@
             this.mskDni.Mask = "00.000.000";
             this.mskDni.Name = "mskDni";
             this.mskDni.Size = new System.Drawing.Size(97, 30);
-            this.mskDni.TabIndex = 45;
+            this.mskDni.TabIndex = 4;
             this.mskDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -198,7 +203,7 @@
             this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 51);
+            this.label1.Location = new System.Drawing.Point(5, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(649, 25);
@@ -209,11 +214,11 @@
             // 
             this.btnCrearCuenta.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.btnCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCuenta.Location = new System.Drawing.Point(48, 392);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(48, 547);
             this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(445, 36);
-            this.btnCrearCuenta.TabIndex = 47;
+            this.btnCrearCuenta.TabIndex = 12;
             this.btnCrearCuenta.Text = "Crear cuenta";
             this.btnCrearCuenta.UseVisualStyleBackColor = true;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
@@ -252,6 +257,7 @@
             this.btnMinizar3.Name = "btnMinizar3";
             this.btnMinizar3.Size = new System.Drawing.Size(89, 36);
             this.btnMinizar3.TabIndex = 54;
+            this.btnMinizar3.TabStop = false;
             this.btnMinizar3.UseVisualStyleBackColor = false;
             this.btnMinizar3.Click += new System.EventHandler(this.btnMinizar3_Click);
             // 
@@ -265,6 +271,7 @@
             this.btnCerrar3.Name = "btnCerrar3";
             this.btnCerrar3.Size = new System.Drawing.Size(89, 36);
             this.btnCerrar3.TabIndex = 53;
+            this.btnCerrar3.TabStop = false;
             this.btnCerrar3.UseVisualStyleBackColor = false;
             this.btnCerrar3.Click += new System.EventHandler(this.btnCerrar3_Click);
             // 
@@ -296,7 +303,7 @@
             // 
             this.lblLeyenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeyenda.Location = new System.Drawing.Point(48, 343);
+            this.lblLeyenda.Location = new System.Drawing.Point(48, 494);
             this.lblLeyenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLeyenda.Name = "lblLeyenda";
             this.lblLeyenda.Size = new System.Drawing.Size(445, 36);
@@ -311,7 +318,7 @@
             this.txtApellido.Location = new System.Drawing.Point(279, 141);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(217, 30);
-            this.txtApellido.TabIndex = 29;
+            this.txtApellido.TabIndex = 2;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
@@ -321,15 +328,64 @@
             this.txtNombre.Location = new System.Drawing.Point(279, 107);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(217, 30);
-            this.txtNombre.TabIndex = 28;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            // 
+            // grpGenero
+            // 
+            this.grpGenero.Controls.Add(this.rdbOtro);
+            this.grpGenero.Controls.Add(this.rdbMujer);
+            this.grpGenero.Controls.Add(this.rdbHombre);
+            this.grpGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpGenero.Location = new System.Drawing.Point(48, 338);
+            this.grpGenero.Name = "grpGenero";
+            this.grpGenero.Size = new System.Drawing.Size(445, 138);
+            this.grpGenero.TabIndex = 8;
+            this.grpGenero.TabStop = false;
+            this.grpGenero.Text = "Seleccione un género";
+            this.grpGenero.Enter += new System.EventHandler(this.grpGenero_Enter);
+            // 
+            // rdbHombre
+            // 
+            this.rdbHombre.AutoSize = true;
+            this.rdbHombre.Location = new System.Drawing.Point(7, 30);
+            this.rdbHombre.Name = "rdbHombre";
+            this.rdbHombre.Size = new System.Drawing.Size(102, 29);
+            this.rdbHombre.TabIndex = 9;
+            this.rdbHombre.TabStop = true;
+            this.rdbHombre.Text = "Hombre";
+            this.rdbHombre.UseVisualStyleBackColor = true;
+            // 
+            // rdbMujer
+            // 
+            this.rdbMujer.AutoSize = true;
+            this.rdbMujer.Location = new System.Drawing.Point(7, 65);
+            this.rdbMujer.Name = "rdbMujer";
+            this.rdbMujer.Size = new System.Drawing.Size(82, 29);
+            this.rdbMujer.TabIndex = 10;
+            this.rdbMujer.TabStop = true;
+            this.rdbMujer.Text = "Mujer";
+            this.rdbMujer.UseVisualStyleBackColor = true;
+            // 
+            // rdbOtro
+            // 
+            this.rdbOtro.AutoSize = true;
+            this.rdbOtro.Location = new System.Drawing.Point(7, 100);
+            this.rdbOtro.Name = "rdbOtro";
+            this.rdbOtro.Size = new System.Drawing.Size(71, 29);
+            this.rdbOtro.TabIndex = 11;
+            this.rdbOtro.TabStop = true;
+            this.rdbOtro.Text = "Otro";
+            this.rdbOtro.UseVisualStyleBackColor = true;
             // 
             // FrmRegistro
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(551, 440);
+            this.BackColor = System.Drawing.Color.Honeydew;
+            this.ClientSize = new System.Drawing.Size(551, 588);
             this.ControlBox = false;
+            this.Controls.Add(this.grpGenero);
             this.Controls.Add(this.pcbMostrar1);
             this.Controls.Add(this.pcbOcultar1);
             this.Controls.Add(this.pcbMostrar);
@@ -366,6 +422,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar1)).EndInit();
+            this.grpGenero.ResumeLayout(false);
+            this.grpGenero.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,5 +453,9 @@
         private System.Windows.Forms.Label lblLeyenda;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.GroupBox grpGenero;
+        private System.Windows.Forms.RadioButton rdbOtro;
+        private System.Windows.Forms.RadioButton rdbMujer;
+        private System.Windows.Forms.RadioButton rdbHombre;
     }
 }
