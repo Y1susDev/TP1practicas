@@ -41,7 +41,7 @@ namespace TP1practicas
                 || string.IsNullOrEmpty(txtContraseña1.Text) || string.IsNullOrEmpty(txtContraseña2.Text) ||
                 !rdbHombre.Checked && !rdbMujer.Checked && !rdbOtro.Checked)
             {
-                lblLeyenda.Text = ("Complete todos los campos");
+                lblLeyenda.Text = "Complete todos los campos";
             }
             else
             {
@@ -151,6 +151,11 @@ namespace TP1practicas
         }
 
         private void grpGenero_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLeyenda_Click(object sender, EventArgs e)
         {
 
         }

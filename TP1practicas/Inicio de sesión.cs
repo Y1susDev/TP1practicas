@@ -49,6 +49,7 @@ namespace TP1practicas
             {
                 MessageBox.Show("¡Inicio de sesión exitoso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblLeyenda.Visible = false;
+                txtUsuario.Clear(); txtContraseña.Clear();
             }
         }
         private void label1_Click(object sender, EventArgs e)

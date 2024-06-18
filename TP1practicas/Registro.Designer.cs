@@ -53,9 +53,9 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.grpGenero = new System.Windows.Forms.GroupBox();
-            this.rdbHombre = new System.Windows.Forms.RadioButton();
-            this.rdbMujer = new System.Windows.Forms.RadioButton();
             this.rdbOtro = new System.Windows.Forms.RadioButton();
+            this.rdbMujer = new System.Windows.Forms.RadioButton();
+            this.rdbHombre = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar1)).BeginInit();
@@ -83,9 +83,9 @@
             this.lblApellido.Location = new System.Drawing.Point(43, 144);
             this.lblApellido.Margin = new System.Windows.Forms.Padding(3);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(82, 25);
+            this.lblApellido.Size = new System.Drawing.Size(98, 25);
             this.lblApellido.TabIndex = 26;
-            this.lblApellido.Text = "Apellido";
+            this.lblApellido.Text = "Apellido/s";
             // 
             // lblNombre
             // 
@@ -95,9 +95,9 @@
             this.lblNombre.Location = new System.Drawing.Point(43, 110);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(3);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(81, 25);
+            this.lblNombre.Size = new System.Drawing.Size(97, 25);
             this.lblNombre.TabIndex = 25;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Nombre/s";
             // 
             // lblFechaNac
             // 
@@ -310,6 +310,7 @@
             this.lblLeyenda.TabIndex = 41;
             this.lblLeyenda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblLeyenda.Visible = false;
+            this.lblLeyenda.Click += new System.EventHandler(this.lblLeyenda_Click);
             // 
             // txtApellido
             // 
@@ -345,16 +346,16 @@
             this.grpGenero.Text = "Seleccione un género";
             this.grpGenero.Enter += new System.EventHandler(this.grpGenero_Enter);
             // 
-            // rdbHombre
+            // rdbOtro
             // 
-            this.rdbHombre.AutoSize = true;
-            this.rdbHombre.Location = new System.Drawing.Point(7, 30);
-            this.rdbHombre.Name = "rdbHombre";
-            this.rdbHombre.Size = new System.Drawing.Size(102, 29);
-            this.rdbHombre.TabIndex = 9;
-            this.rdbHombre.TabStop = true;
-            this.rdbHombre.Text = "Hombre";
-            this.rdbHombre.UseVisualStyleBackColor = true;
+            this.rdbOtro.AutoSize = true;
+            this.rdbOtro.Location = new System.Drawing.Point(7, 100);
+            this.rdbOtro.Name = "rdbOtro";
+            this.rdbOtro.Size = new System.Drawing.Size(71, 29);
+            this.rdbOtro.TabIndex = 11;
+            this.rdbOtro.TabStop = true;
+            this.rdbOtro.Text = "Otro";
+            this.rdbOtro.UseVisualStyleBackColor = true;
             // 
             // rdbMujer
             // 
@@ -367,16 +368,16 @@
             this.rdbMujer.Text = "Mujer";
             this.rdbMujer.UseVisualStyleBackColor = true;
             // 
-            // rdbOtro
+            // rdbHombre
             // 
-            this.rdbOtro.AutoSize = true;
-            this.rdbOtro.Location = new System.Drawing.Point(7, 100);
-            this.rdbOtro.Name = "rdbOtro";
-            this.rdbOtro.Size = new System.Drawing.Size(71, 29);
-            this.rdbOtro.TabIndex = 11;
-            this.rdbOtro.TabStop = true;
-            this.rdbOtro.Text = "Otro";
-            this.rdbOtro.UseVisualStyleBackColor = true;
+            this.rdbHombre.AutoSize = true;
+            this.rdbHombre.Location = new System.Drawing.Point(7, 30);
+            this.rdbHombre.Name = "rdbHombre";
+            this.rdbHombre.Size = new System.Drawing.Size(102, 29);
+            this.rdbHombre.TabIndex = 9;
+            this.rdbHombre.TabStop = true;
+            this.rdbHombre.Text = "Hombre";
+            this.rdbHombre.UseVisualStyleBackColor = true;
             // 
             // FrmRegistro
             // 
@@ -416,7 +417,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro";
+            this.Text = "Registración";
             this.Load += new System.EventHandler(this.FrmRegistro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar)).EndInit();

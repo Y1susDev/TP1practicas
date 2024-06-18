@@ -25,7 +25,6 @@ namespace TP1practicas
 
         private void btnEnviarCodigo_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text) || !mskFechaNacimiento.MaskFull || !mskDNI.MaskFull)
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
@@ -42,14 +41,26 @@ namespace TP1practicas
 
         private void btnIngresarCodigo_Click(object sender, EventArgs e)
         {
-            if (mskCodigoEnviado.MaskFull)
+            DialogResult CrearCuenta;
+            if (!mskCodigoEnviado.MaskFull)
             {
-                MessageBox.Show("¡Se ha restablecido su usuario/contraseña exitosamente!",
-                    "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Complete el campo!","", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else MessageBox.Show("¡Complete el campo!",
-                    "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            else
+            {
+                lblLeyenda.Visible = false;
+                txtNombre.Clear(); txtApellido.Clear(); mskFechaNacimiento.Clear(); mskDNI.Clear(); mskCodigoEnviado.Clear();
+                CrearCuenta = MessageBox.Show("¡Se ha restablecido su usuario/contraseña exitosamente! " +
+                "\n               Presione Aceptar para volver al menú", "",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (CrearCuenta == DialogResult.OK)
+                {
+                    InicioSesion iniciosesion = new InicioSesion();
+                    iniciosesion.Show();
+                    this.Close();
+                }
+                
+            }
         }
 
         private void lblRecContraseña_Click(object sender, EventArgs e)
@@ -171,7 +182,7 @@ namespace TP1practicas
 
         private void btnMinizar2_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void lblIngreseCodigo_Click(object sender, EventArgs e)

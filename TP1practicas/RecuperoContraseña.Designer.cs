@@ -53,7 +53,7 @@
             this.btnEnviarCodigo.Location = new System.Drawing.Point(189, 257);
             this.btnEnviarCodigo.Name = "btnEnviarCodigo";
             this.btnEnviarCodigo.Size = new System.Drawing.Size(440, 36);
-            this.btnEnviarCodigo.TabIndex = 21;
+            this.btnEnviarCodigo.TabIndex = 5;
             this.btnEnviarCodigo.Text = "Enviar código";
             this.btnEnviarCodigo.UseVisualStyleBackColor = true;
             this.btnEnviarCodigo.Click += new System.EventHandler(this.btnEnviarCodigo_Click);
@@ -64,7 +64,7 @@
             this.txtApellido.Location = new System.Drawing.Point(412, 148);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(217, 30);
-            this.txtApellido.TabIndex = 18;
+            this.txtApellido.TabIndex = 2;
             this.txtApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoKey);
             // 
@@ -74,7 +74,7 @@
             this.txtNombre.Location = new System.Drawing.Point(412, 114);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(217, 30);
-            this.txtNombre.TabIndex = 17;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreKey);
             // 
@@ -130,11 +130,11 @@
             this.btnIngresarCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnIngresarCodigo.Enabled = false;
             this.btnIngresarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresarCodigo.Location = new System.Drawing.Point(189, 425);
+            this.btnIngresarCodigo.Location = new System.Drawing.Point(189, 404);
             this.btnIngresarCodigo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.btnIngresarCodigo.Name = "btnIngresarCodigo";
             this.btnIngresarCodigo.Size = new System.Drawing.Size(440, 36);
-            this.btnIngresarCodigo.TabIndex = 24;
+            this.btnIngresarCodigo.TabIndex = 7;
             this.btnIngresarCodigo.Text = "Reestablecer";
             this.btnIngresarCodigo.UseVisualStyleBackColor = false;
             this.btnIngresarCodigo.Click += new System.EventHandler(this.btnIngresarCodigo_Click);
@@ -143,7 +143,7 @@
             // 
             this.lblLeyenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeyenda.Location = new System.Drawing.Point(191, 316);
+            this.lblLeyenda.Location = new System.Drawing.Point(189, 308);
             this.lblLeyenda.Margin = new System.Windows.Forms.Padding(3);
             this.lblLeyenda.Name = "lblLeyenda";
             this.lblLeyenda.Size = new System.Drawing.Size(438, 36);
@@ -156,7 +156,7 @@
             // 
             this.lblIngreseCodigo.AutoSize = true;
             this.lblIngreseCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngreseCodigo.Location = new System.Drawing.Point(184, 379);
+            this.lblIngreseCodigo.Location = new System.Drawing.Point(184, 359);
             this.lblIngreseCodigo.Margin = new System.Windows.Forms.Padding(3);
             this.lblIngreseCodigo.Name = "lblIngreseCodigo";
             this.lblIngreseCodigo.Size = new System.Drawing.Size(160, 25);
@@ -171,7 +171,7 @@
             this.mskDNI.Mask = "00.000.000";
             this.mskDNI.Name = "mskDNI";
             this.mskDNI.Size = new System.Drawing.Size(97, 30);
-            this.mskDNI.TabIndex = 45;
+            this.mskDNI.TabIndex = 4;
             this.mskDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskDNI.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskDNI_MaskInputRejected);
             // 
@@ -182,7 +182,7 @@
             this.mskFechaNacimiento.Mask = "00/00/0000";
             this.mskFechaNacimiento.Name = "mskFechaNacimiento";
             this.mskFechaNacimiento.Size = new System.Drawing.Size(97, 30);
-            this.mskFechaNacimiento.TabIndex = 46;
+            this.mskFechaNacimiento.TabIndex = 3;
             this.mskFechaNacimiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskFechaNacimiento.ValidatingType = typeof(System.DateTime);
             this.mskFechaNacimiento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskFechaNacimiento_MaskInputRejected);
@@ -191,11 +191,11 @@
             // 
             this.mskCodigoEnviado.Enabled = false;
             this.mskCodigoEnviado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCodigoEnviado.Location = new System.Drawing.Point(412, 376);
+            this.mskCodigoEnviado.Location = new System.Drawing.Point(412, 359);
             this.mskCodigoEnviado.Mask = "00000";
             this.mskCodigoEnviado.Name = "mskCodigoEnviado";
             this.mskCodigoEnviado.Size = new System.Drawing.Size(97, 30);
-            this.mskCodigoEnviado.TabIndex = 47;
+            this.mskCodigoEnviado.TabIndex = 6;
             this.mskCodigoEnviado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskCodigoEnviado.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCodigoEnviado_MaskInputRejected);
             // 
@@ -218,10 +218,11 @@
             this.btnMinizar2.BackColor = System.Drawing.Color.LightCyan;
             this.btnMinizar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinizar2.Image = ((System.Drawing.Image)(resources.GetObject("btnMinizar2.Image")));
-            this.btnMinizar2.Location = new System.Drawing.Point(2, 2);
+            this.btnMinizar2.Location = new System.Drawing.Point(633, 2);
             this.btnMinizar2.Name = "btnMinizar2";
             this.btnMinizar2.Size = new System.Drawing.Size(89, 36);
             this.btnMinizar2.TabIndex = 52;
+            this.btnMinizar2.TabStop = false;
             this.btnMinizar2.UseVisualStyleBackColor = false;
             this.btnMinizar2.Click += new System.EventHandler(this.btnMinizar2_Click);
             // 
@@ -235,6 +236,7 @@
             this.btnCerrar2.Name = "btnCerrar2";
             this.btnCerrar2.Size = new System.Drawing.Size(89, 36);
             this.btnCerrar2.TabIndex = 51;
+            this.btnCerrar2.TabStop = false;
             this.btnCerrar2.UseVisualStyleBackColor = false;
             this.btnCerrar2.Click += new System.EventHandler(this.btnCerrar2_Click);
             // 
@@ -243,7 +245,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(819, 473);
+            this.ClientSize = new System.Drawing.Size(819, 444);
             this.ControlBox = false;
             this.Controls.Add(this.lblInicieSesion);
             this.Controls.Add(this.btnMinizar2);
@@ -262,12 +264,13 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblFechaNac);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RecuperoContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Recupero contraseña";
+            this.Text = "Recuperación";
             this.Load += new System.EventHandler(this.RecuperoContraseña_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -108,6 +108,7 @@
             this.lnkolvidocontraseña.Name = "lnkolvidocontraseña";
             this.lnkolvidocontraseña.Size = new System.Drawing.Size(265, 25);
             this.lnkolvidocontraseña.TabIndex = 4;
+            this.lnkolvidocontraseña.TabStop = true;
             this.lnkolvidocontraseña.Text = "Olvide mi contraseña/usuario";
             this.lnkolvidocontraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lnkolvidocontraseña.TabStopChanged += new System.EventHandler(this.lnkolvidocontraseña_TabStopChanged);
@@ -122,6 +123,7 @@
             this.lnkCrearCuenta.Name = "lnkCrearCuenta";
             this.lnkCrearCuenta.Size = new System.Drawing.Size(163, 25);
             this.lnkCrearCuenta.TabIndex = 5;
+            this.lnkCrearCuenta.TabStop = true;
             this.lnkCrearCuenta.Text = "Crear una cuenta";
             this.lnkCrearCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lnkCrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCrearCuenta_LinkClicked);
@@ -230,7 +232,7 @@
             this.MinimizeBox = false;
             this.Name = "InicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InicioSesion";
+            this.Text = "Menú";
             this.Load += new System.EventHandler(this.InicioSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar)).EndInit();
