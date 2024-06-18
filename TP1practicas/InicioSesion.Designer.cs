@@ -53,7 +53,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(59, 196);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(370, 36);
-            this.btnIngresar.TabIndex = 30;
+            this.btnIngresar.TabIndex = 3;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -65,7 +65,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(202, 30);
-            this.txtContraseña.TabIndex = 27;
+            this.txtContraseña.TabIndex = 2;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // txtUsuario
@@ -74,7 +74,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(188, 115);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(238, 30);
-            this.txtUsuario.TabIndex = 26;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // lblContraseña
@@ -103,26 +103,25 @@
             // 
             this.lnkolvidocontraseña.AutoSize = true;
             this.lnkolvidocontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkolvidocontraseña.Location = new System.Drawing.Point(125, 303);
+            this.lnkolvidocontraseña.Location = new System.Drawing.Point(130, 303);
             this.lnkolvidocontraseña.Margin = new System.Windows.Forms.Padding(3);
             this.lnkolvidocontraseña.Name = "lnkolvidocontraseña";
             this.lnkolvidocontraseña.Size = new System.Drawing.Size(265, 25);
-            this.lnkolvidocontraseña.TabIndex = 32;
-            this.lnkolvidocontraseña.TabStop = true;
+            this.lnkolvidocontraseña.TabIndex = 4;
             this.lnkolvidocontraseña.Text = "Olvide mi contraseña/usuario";
             this.lnkolvidocontraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkolvidocontraseña.TabStopChanged += new System.EventHandler(this.lnkolvidocontraseña_TabStopChanged);
             this.lnkolvidocontraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkolvidocontraseña_LinkClicked);
             // 
             // lnkCrearCuenta
             // 
             this.lnkCrearCuenta.AutoSize = true;
             this.lnkCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkCrearCuenta.Location = new System.Drawing.Point(167, 335);
+            this.lnkCrearCuenta.Location = new System.Drawing.Point(172, 335);
             this.lnkCrearCuenta.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.lnkCrearCuenta.Name = "lnkCrearCuenta";
             this.lnkCrearCuenta.Size = new System.Drawing.Size(163, 25);
-            this.lnkCrearCuenta.TabIndex = 34;
-            this.lnkCrearCuenta.TabStop = true;
+            this.lnkCrearCuenta.TabIndex = 5;
             this.lnkCrearCuenta.Text = "Crear una cuenta";
             this.lnkCrearCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lnkCrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCrearCuenta_LinkClicked);
@@ -162,6 +161,7 @@
             this.btnMinizar.Name = "btnMinizar";
             this.btnMinizar.Size = new System.Drawing.Size(89, 36);
             this.btnMinizar.TabIndex = 50;
+            this.btnMinizar.TabStop = false;
             this.btnMinizar.UseVisualStyleBackColor = false;
             this.btnMinizar.Click += new System.EventHandler(this.btnMinizar_Click);
             // 
@@ -175,6 +175,7 @@
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(89, 36);
             this.btnCerrar.TabIndex = 49;
+            this.btnCerrar.TabStop = false;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.button2_Click);
             // 

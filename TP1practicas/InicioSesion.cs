@@ -21,6 +21,7 @@ namespace TP1practicas
 
         private void lnkolvidocontraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            lnkolvidocontraseña.TabStop = true;
             RecuperoContraseña recuperocontra = new RecuperoContraseña();
             recuperocontra.Show();
             this.Hide();
@@ -103,6 +104,11 @@ namespace TP1practicas
         {
             pcbMostrar.BringToFront();
             txtContraseña.PasswordChar = '*';
+        }
+
+        private void lnkolvidocontraseña_TabStopChanged(object sender, EventArgs e)
+        {
+
         }
     }
     
