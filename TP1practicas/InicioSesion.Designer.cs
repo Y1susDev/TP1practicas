@@ -61,19 +61,19 @@
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(209, 148);
+            this.txtContraseña.Location = new System.Drawing.Point(188, 148);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(220, 30);
+            this.txtContraseña.Size = new System.Drawing.Size(202, 30);
             this.txtContraseña.TabIndex = 27;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(209, 115);
+            this.txtUsuario.Location = new System.Drawing.Point(188, 115);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(220, 30);
+            this.txtUsuario.Size = new System.Drawing.Size(238, 30);
             this.txtUsuario.TabIndex = 26;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
@@ -158,7 +158,7 @@
             this.btnMinizar.BackColor = System.Drawing.Color.LightCyan;
             this.btnMinizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinizar.Image")));
-            this.btnMinizar.Location = new System.Drawing.Point(3, 2);
+            this.btnMinizar.Location = new System.Drawing.Point(302, 2);
             this.btnMinizar.Name = "btnMinizar";
             this.btnMinizar.Size = new System.Drawing.Size(89, 36);
             this.btnMinizar.TabIndex = 50;
@@ -182,23 +182,25 @@
             // 
             this.pcbMostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbMostrar.Image = global::TP1practicas.Properties.Resources.mostrar2;
-            this.pcbMostrar.Location = new System.Drawing.Point(435, 147);
+            this.pcbMostrar.Location = new System.Drawing.Point(394, 147);
             this.pcbMostrar.Name = "pcbMostrar";
             this.pcbMostrar.Size = new System.Drawing.Size(30, 30);
             this.pcbMostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pcbMostrar.TabIndex = 60;
             this.pcbMostrar.TabStop = false;
+            this.pcbMostrar.Click += new System.EventHandler(this.pcbMostrar_Click);
             // 
             // pcbOcultar
             // 
             this.pcbOcultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbOcultar.Image = global::TP1practicas.Properties.Resources.ocultar5;
-            this.pcbOcultar.Location = new System.Drawing.Point(432, 109);
+            this.pcbOcultar.Location = new System.Drawing.Point(394, 147);
             this.pcbOcultar.Name = "pcbOcultar";
             this.pcbOcultar.Size = new System.Drawing.Size(30, 30);
             this.pcbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pcbOcultar.TabIndex = 59;
             this.pcbOcultar.TabStop = false;
+            this.pcbOcultar.Click += new System.EventHandler(this.pcbOcultar_Click);
             // 
             // InicioSesion
             // 

@@ -42,12 +42,13 @@ namespace TP1practicas
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text))
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
+                lblLeyenda.Visible = true;
             }
             else 
             {
-                MessageBox.Show("Inicio de sesión exitoso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Inicio de sesión exitoso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblLeyenda.Visible = false;
             }
-            lblLeyenda.Visible = true;        
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -90,6 +91,18 @@ namespace TP1practicas
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void pcbMostrar_Click(object sender, EventArgs e)
+        {
+            pcbOcultar.BringToFront();
+            txtContraseña.PasswordChar = '\0';
+        }
+
+        private void pcbOcultar_Click(object sender, EventArgs e)
+        {
+            pcbMostrar.BringToFront();
+            txtContraseña.PasswordChar = '*';
         }
     }
     
