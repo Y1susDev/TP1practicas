@@ -49,13 +49,6 @@ namespace TP1practicas
             }
             lblLeyenda.Visible = true;        
         }
-
-        private void lnkOlvidoUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            RecuperoContraseña v3 = new RecuperoContraseña();
-            v3.ShowDialog();
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -63,8 +56,10 @@ namespace TP1practicas
 
         private void lnkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmRegistro v1 = new FrmRegistro();
-            v1.ShowDialog();
+            FrmRegistro Registro = new FrmRegistro();
+            Registro.Show();
+            this.Hide();
+
         }
 
         private void lblTexto_Click(object sender, EventArgs e)

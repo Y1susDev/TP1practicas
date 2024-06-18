@@ -47,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Personas.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RecuperoContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +78,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RecuperoContraseña.resx">
       <DependentUpon>RecuperoContraseña.cs</DependentUpon>
@@ -92,6 +98,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mostrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ocultar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ocultar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ocultar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ocultar5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mostrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mostrar2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

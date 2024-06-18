@@ -42,17 +42,17 @@
             this.mskDNI = new System.Windows.Forms.MaskedTextBox();
             this.mskFechaNacimiento = new System.Windows.Forms.MaskedTextBox();
             this.mskCodigoEnviado = new System.Windows.Forms.MaskedTextBox();
+            this.lblInicieSesion = new System.Windows.Forms.Label();
             this.btnMinizar2 = new System.Windows.Forms.Button();
             this.btnCerrar2 = new System.Windows.Forms.Button();
-            this.lblInicieSesion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEnviarCodigo
             // 
             this.btnEnviarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviarCodigo.Location = new System.Drawing.Point(253, 257);
+            this.btnEnviarCodigo.Location = new System.Drawing.Point(189, 257);
             this.btnEnviarCodigo.Name = "btnEnviarCodigo";
-            this.btnEnviarCodigo.Size = new System.Drawing.Size(244, 36);
+            this.btnEnviarCodigo.Size = new System.Drawing.Size(440, 36);
             this.btnEnviarCodigo.TabIndex = 21;
             this.btnEnviarCodigo.Text = "Enviar código";
             this.btnEnviarCodigo.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(351, 148);
+            this.txtApellido.Location = new System.Drawing.Point(412, 148);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(217, 30);
             this.txtApellido.TabIndex = 18;
@@ -71,7 +71,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(351, 117);
+            this.txtNombre.Location = new System.Drawing.Point(412, 114);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(217, 30);
             this.txtNombre.TabIndex = 17;
@@ -82,7 +82,7 @@
             // 
             this.lblDni.AutoSize = true;
             this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDni.Location = new System.Drawing.Point(173, 216);
+            this.lblDni.Location = new System.Drawing.Point(184, 216);
             this.lblDni.Margin = new System.Windows.Forms.Padding(3);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(55, 25);
@@ -93,7 +93,7 @@
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(173, 151);
+            this.lblApellido.Location = new System.Drawing.Point(184, 151);
             this.lblApellido.Margin = new System.Windows.Forms.Padding(3);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(98, 25);
@@ -104,7 +104,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(173, 117);
+            this.lblNombre.Location = new System.Drawing.Point(184, 117);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(3);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(97, 25);
@@ -117,7 +117,7 @@
             // 
             this.lblFechaNac.AutoSize = true;
             this.lblFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNac.Location = new System.Drawing.Point(173, 183);
+            this.lblFechaNac.Location = new System.Drawing.Point(184, 183);
             this.lblFechaNac.Margin = new System.Windows.Forms.Padding(3);
             this.lblFechaNac.Name = "lblFechaNac";
             this.lblFechaNac.Size = new System.Drawing.Size(193, 25);
@@ -129,11 +129,11 @@
             // 
             this.btnIngresarCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnIngresarCodigo.Enabled = false;
-            this.btnIngresarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresarCodigo.Location = new System.Drawing.Point(253, 425);
+            this.btnIngresarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresarCodigo.Location = new System.Drawing.Point(189, 425);
             this.btnIngresarCodigo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.btnIngresarCodigo.Name = "btnIngresarCodigo";
-            this.btnIngresarCodigo.Size = new System.Drawing.Size(244, 36);
+            this.btnIngresarCodigo.Size = new System.Drawing.Size(440, 36);
             this.btnIngresarCodigo.TabIndex = 24;
             this.btnIngresarCodigo.Text = "Reestablecer";
             this.btnIngresarCodigo.UseVisualStyleBackColor = false;
@@ -143,10 +143,10 @@
             // 
             this.lblLeyenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeyenda.Location = new System.Drawing.Point(180, 317);
+            this.lblLeyenda.Location = new System.Drawing.Point(191, 316);
             this.lblLeyenda.Margin = new System.Windows.Forms.Padding(3);
             this.lblLeyenda.Name = "lblLeyenda";
-            this.lblLeyenda.Size = new System.Drawing.Size(388, 34);
+            this.lblLeyenda.Size = new System.Drawing.Size(438, 36);
             this.lblLeyenda.TabIndex = 42;
             this.lblLeyenda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblLeyenda.Visible = false;
@@ -156,17 +156,18 @@
             // 
             this.lblIngreseCodigo.AutoSize = true;
             this.lblIngreseCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngreseCodigo.Location = new System.Drawing.Point(177, 379);
+            this.lblIngreseCodigo.Location = new System.Drawing.Point(184, 379);
             this.lblIngreseCodigo.Margin = new System.Windows.Forms.Padding(3);
             this.lblIngreseCodigo.Name = "lblIngreseCodigo";
-            this.lblIngreseCodigo.Size = new System.Drawing.Size(234, 25);
+            this.lblIngreseCodigo.Size = new System.Drawing.Size(160, 25);
             this.lblIngreseCodigo.TabIndex = 44;
-            this.lblIngreseCodigo.Text = "Ingrese el código enviado";
+            this.lblIngreseCodigo.Text = "Ingrese el código\r\n";
+            this.lblIngreseCodigo.Click += new System.EventHandler(this.lblIngreseCodigo_Click);
             // 
             // mskDNI
             // 
             this.mskDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskDNI.Location = new System.Drawing.Point(413, 213);
+            this.mskDNI.Location = new System.Drawing.Point(412, 213);
             this.mskDNI.Mask = "00.000.000";
             this.mskDNI.Name = "mskDNI";
             this.mskDNI.Size = new System.Drawing.Size(97, 30);
@@ -177,7 +178,7 @@
             // mskFechaNacimiento
             // 
             this.mskFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskFechaNacimiento.Location = new System.Drawing.Point(413, 180);
+            this.mskFechaNacimiento.Location = new System.Drawing.Point(412, 180);
             this.mskFechaNacimiento.Mask = "00/00/0000";
             this.mskFechaNacimiento.Name = "mskFechaNacimiento";
             this.mskFechaNacimiento.Size = new System.Drawing.Size(97, 30);
@@ -190,13 +191,27 @@
             // 
             this.mskCodigoEnviado.Enabled = false;
             this.mskCodigoEnviado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCodigoEnviado.Location = new System.Drawing.Point(413, 376);
+            this.mskCodigoEnviado.Location = new System.Drawing.Point(412, 376);
             this.mskCodigoEnviado.Mask = "00000";
             this.mskCodigoEnviado.Name = "mskCodigoEnviado";
             this.mskCodigoEnviado.Size = new System.Drawing.Size(97, 30);
             this.mskCodigoEnviado.TabIndex = 47;
             this.mskCodigoEnviado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskCodigoEnviado.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCodigoEnviado_MaskInputRejected);
+            // 
+            // lblInicieSesion
+            // 
+            this.lblInicieSesion.AutoSize = true;
+            this.lblInicieSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicieSesion.Location = new System.Drawing.Point(40, 61);
+            this.lblInicieSesion.Margin = new System.Windows.Forms.Padding(3);
+            this.lblInicieSesion.Name = "lblInicieSesion";
+            this.lblInicieSesion.Size = new System.Drawing.Size(885, 25);
+            this.lblInicieSesion.TabIndex = 53;
+            this.lblInicieSesion.Text = "Ingrese los datos solicitados para enviar un código de recuperación a su correo e" +
+    "lectrónico\r\n";
+            this.lblInicieSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblInicieSesion.Click += new System.EventHandler(this.lblInicieSesion_Click);
             // 
             // btnMinizar2
             // 
@@ -208,6 +223,7 @@
             this.btnMinizar2.Size = new System.Drawing.Size(89, 36);
             this.btnMinizar2.TabIndex = 52;
             this.btnMinizar2.UseVisualStyleBackColor = false;
+            this.btnMinizar2.Click += new System.EventHandler(this.btnMinizar2_Click);
             // 
             // btnCerrar2
             // 
@@ -215,33 +231,19 @@
             this.btnCerrar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCerrar2.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar2.Image")));
-            this.btnCerrar2.Location = new System.Drawing.Point(640, 2);
+            this.btnCerrar2.Location = new System.Drawing.Point(728, 2);
             this.btnCerrar2.Name = "btnCerrar2";
             this.btnCerrar2.Size = new System.Drawing.Size(89, 36);
             this.btnCerrar2.TabIndex = 51;
             this.btnCerrar2.UseVisualStyleBackColor = false;
             this.btnCerrar2.Click += new System.EventHandler(this.btnCerrar2_Click);
             // 
-            // lblInicieSesion
-            // 
-            this.lblInicieSesion.AutoSize = true;
-            this.lblInicieSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInicieSesion.Location = new System.Drawing.Point(43, 61);
-            this.lblInicieSesion.Margin = new System.Windows.Forms.Padding(3);
-            this.lblInicieSesion.Name = "lblInicieSesion";
-            this.lblInicieSesion.Size = new System.Drawing.Size(794, 25);
-            this.lblInicieSesion.TabIndex = 53;
-            this.lblInicieSesion.Text = "Ingrese los datos solicitados para enviar un código de recuperación a su correo e" +
-    "lectrónico\r\n";
-            this.lblInicieSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblInicieSesion.Click += new System.EventHandler(this.lblInicieSesion_Click);
-            // 
             // RecuperoContraseña
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(731, 473);
+            this.ClientSize = new System.Drawing.Size(819, 473);
             this.ControlBox = false;
             this.Controls.Add(this.lblInicieSesion);
             this.Controls.Add(this.btnMinizar2);

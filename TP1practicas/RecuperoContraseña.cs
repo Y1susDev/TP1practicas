@@ -47,7 +47,7 @@ namespace TP1practicas
                 MessageBox.Show("¡Se ha restablecido su usuario/contraseña exitosamente!",
                     "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else MessageBox.Show("¡Complete el campo !",
+            else MessageBox.Show("¡Complete el campo!",
                     "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
@@ -167,6 +167,16 @@ namespace TP1practicas
             InicioSesion iniciosesion = new InicioSesion();
             iniciosesion.Show();
             this.Close();
+        }
+
+        private void btnMinizar2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblIngreseCodigo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }            

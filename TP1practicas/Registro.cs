@@ -20,6 +20,8 @@ namespace TP1practicas
         {
             InitializeComponent();
             //INICIALIZAMOS LA LISTA
+            Icon icono = new Icon(Application.StartupPath + @"\Iconos\herramienta.ico");
+            this.Icon = icono;
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
@@ -34,26 +36,14 @@ namespace TP1practicas
 
             if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(fechanacimiento) || string.IsNullOrEmpty(dni) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(contraseña1) || string.IsNullOrEmpty(contraseña2))
             {
-                lblLeyenda.Text = ("Algun campo es erroneo o se encuentra icompleto");
+                lblLeyenda.Text = ("Complete todos los campos");
             }
             else
             {
-                lblLeyenda.Text = ("Usted acaba de crear una Cuenta Nueva");
-                txtNombre.Clear();
-                txtApellido.Clear();
-                mskFechaNac.Clear();
-                mskDni.Clear();
-                txtEmail.Clear();
-                txtContraseña1.Clear();
-                txtContraseña2.Clear();
+                MessageBox.Show("¡Se cuenta se ha creado exitosamente!","", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             lblLeyenda.Visible = true;
             //CARGAMOS LA LISTA
-        }
-
-        private void btnInicioSesion_Click(object sender, EventArgs e)
-        {
-         
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs nptNombre)
@@ -104,6 +94,48 @@ namespace TP1practicas
         private void btnCrearCuenta_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void btnCerrar3_Click(object sender, EventArgs e)
+        {
+            InicioSesion iniciosesion = new InicioSesion();
+            iniciosesion.Show();
+            this.Close();
+        }
+
+        private void btnMinizar3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void lblContraseña1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pcbMostrar_Click(object sender, EventArgs e)
+        {
+            pcbOcultar.BringToFront();
+            txtContraseña1.PasswordChar = '\0';
+        }
+
+        private void pcbOcultar_Click(object sender, EventArgs e)
+        {
+            pcbMostrar.BringToFront();
+            txtContraseña1.PasswordChar = '*';
+
+        }
+
+        private void pcbMostrar1_Click(object sender, EventArgs e)
+        {
+            pcbOcultar1.BringToFront();
+            txtContraseña2.PasswordChar = '\0';
+        }
+
+        private void pcbOcultar1_Click(object sender, EventArgs e)
+        {
+            pcbMostrar1.BringToFront();
+            txtContraseña2.PasswordChar = '*';
         }
     }
 }
