@@ -44,7 +44,7 @@ namespace TP1practicas
             DialogResult CrearCuenta;
             if (!mskCodigoEnviado.MaskFull)
             {
-                MessageBox.Show("¡Complete el campo!","", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Complete el campo","", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
