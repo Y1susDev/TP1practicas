@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -145,12 +146,12 @@ namespace TP1practicas
 
         private void mskFechaNacimiento_MaskInputRejected(object sender, MaskInputRejectedEventArgs FechaNacKey)
         {
-
+            
         }
 
         private void mskDNI_MaskInputRejected(object sender, MaskInputRejectedEventArgs DniKey)
         {
-
+            
         }
 
         private void lblLeyenda2_Click(object sender, EventArgs e)
@@ -165,9 +166,9 @@ namespace TP1practicas
 
         private void mskCodigoEnviado_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-
+            
         }
-
+        
         private void lblInicieSesion_Click(object sender, EventArgs e)
         {
 
@@ -187,7 +188,7 @@ namespace TP1practicas
 
         private void lblIngreseCodigo_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }            

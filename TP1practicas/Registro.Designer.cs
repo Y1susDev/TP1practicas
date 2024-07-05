@@ -56,11 +56,14 @@
             this.rdbOtro = new System.Windows.Forms.RadioButton();
             this.rdbMujer = new System.Windows.Forms.RadioButton();
             this.rdbHombre = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar1)).BeginInit();
             this.grpGenero.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDni
@@ -71,7 +74,7 @@
             this.lblDni.Location = new System.Drawing.Point(43, 209);
             this.lblDni.Margin = new System.Windows.Forms.Padding(3);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(55, 25);
+            this.lblDni.Size = new System.Drawing.Size(45, 20);
             this.lblDni.TabIndex = 27;
             this.lblDni.Text = "D.N.I";
             // 
@@ -83,7 +86,7 @@
             this.lblApellido.Location = new System.Drawing.Point(43, 144);
             this.lblApellido.Margin = new System.Windows.Forms.Padding(3);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(98, 25);
+            this.lblApellido.Size = new System.Drawing.Size(77, 20);
             this.lblApellido.TabIndex = 26;
             this.lblApellido.Text = "Apellido/s";
             // 
@@ -95,7 +98,7 @@
             this.lblNombre.Location = new System.Drawing.Point(43, 110);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(3);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(97, 25);
+            this.lblNombre.Size = new System.Drawing.Size(77, 20);
             this.lblNombre.TabIndex = 25;
             this.lblNombre.Text = "Nombre/s";
             // 
@@ -107,7 +110,7 @@
             this.lblFechaNac.Location = new System.Drawing.Point(43, 176);
             this.lblFechaNac.Margin = new System.Windows.Forms.Padding(3);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(196, 25);
+            this.lblFechaNac.Size = new System.Drawing.Size(159, 20);
             this.lblFechaNac.TabIndex = 23;
             this.lblFechaNac.Text = "Fecha de Nacimiento";
             // 
@@ -118,7 +121,7 @@
             this.txtContraseña2.Location = new System.Drawing.Point(279, 302);
             this.txtContraseña2.Name = "txtContraseña2";
             this.txtContraseña2.PasswordChar = '*';
-            this.txtContraseña2.Size = new System.Drawing.Size(181, 30);
+            this.txtContraseña2.Size = new System.Drawing.Size(181, 26);
             this.txtContraseña2.TabIndex = 7;
             // 
             // txtContraseña1
@@ -128,7 +131,7 @@
             this.txtContraseña1.Location = new System.Drawing.Point(279, 269);
             this.txtContraseña1.Name = "txtContraseña1";
             this.txtContraseña1.PasswordChar = '*';
-            this.txtContraseña1.Size = new System.Drawing.Size(181, 30);
+            this.txtContraseña1.Size = new System.Drawing.Size(181, 26);
             this.txtContraseña1.TabIndex = 6;
             // 
             // txtEmail
@@ -137,7 +140,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(279, 237);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(217, 30);
+            this.txtEmail.Size = new System.Drawing.Size(217, 26);
             this.txtEmail.TabIndex = 5;
             // 
             // lblContraseña2
@@ -148,7 +151,7 @@
             this.lblContraseña2.Location = new System.Drawing.Point(43, 305);
             this.lblContraseña2.Margin = new System.Windows.Forms.Padding(3);
             this.lblContraseña2.Name = "lblContraseña2";
-            this.lblContraseña2.Size = new System.Drawing.Size(222, 25);
+            this.lblContraseña2.Size = new System.Drawing.Size(182, 20);
             this.lblContraseña2.TabIndex = 36;
             this.lblContraseña2.Text = "Reingrese la contraseña";
             // 
@@ -160,7 +163,7 @@
             this.lblEmail.Location = new System.Drawing.Point(43, 240);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(3);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(171, 25);
+            this.lblEmail.Size = new System.Drawing.Size(138, 20);
             this.lblEmail.TabIndex = 35;
             this.lblEmail.Text = "Correo electrónico\r\n";
             // 
@@ -172,7 +175,7 @@
             this.lblContraseña1.Location = new System.Drawing.Point(43, 272);
             this.lblContraseña1.Margin = new System.Windows.Forms.Padding(3);
             this.lblContraseña1.Name = "lblContraseña1";
-            this.lblContraseña1.Size = new System.Drawing.Size(217, 25);
+            this.lblContraseña1.Size = new System.Drawing.Size(178, 20);
             this.lblContraseña1.TabIndex = 34;
             this.lblContraseña1.Text = "Ingrese una contraseña";
             this.lblContraseña1.Click += new System.EventHandler(this.lblContraseña1_Click);
@@ -183,7 +186,7 @@
             this.mskFechaNac.Location = new System.Drawing.Point(279, 173);
             this.mskFechaNac.Mask = "00/00/0000";
             this.mskFechaNac.Name = "mskFechaNac";
-            this.mskFechaNac.Size = new System.Drawing.Size(97, 30);
+            this.mskFechaNac.Size = new System.Drawing.Size(97, 26);
             this.mskFechaNac.TabIndex = 3;
             this.mskFechaNac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskFechaNac.ValidatingType = typeof(System.DateTime);
@@ -194,7 +197,7 @@
             this.mskDni.Location = new System.Drawing.Point(279, 206);
             this.mskDni.Mask = "00.000.000";
             this.mskDni.Name = "mskDni";
-            this.mskDni.Size = new System.Drawing.Size(97, 30);
+            this.mskDni.Size = new System.Drawing.Size(97, 26);
             this.mskDni.TabIndex = 4;
             this.mskDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -206,7 +209,7 @@
             this.label1.Location = new System.Drawing.Point(5, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(649, 25);
+            this.label1.Size = new System.Drawing.Size(541, 20);
             this.label1.TabIndex = 46;
             this.label1.Text = "Para crear una cuenta ingrese los datos solicitados a continuación\r\n";
             // 
@@ -253,7 +256,7 @@
             this.btnMinizar3.BackColor = System.Drawing.Color.LightCyan;
             this.btnMinizar3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinizar3.Image = ((System.Drawing.Image)(resources.GetObject("btnMinizar3.Image")));
-            this.btnMinizar3.Location = new System.Drawing.Point(365, 2);
+            this.btnMinizar3.Location = new System.Drawing.Point(366, 3);
             this.btnMinizar3.Name = "btnMinizar3";
             this.btnMinizar3.Size = new System.Drawing.Size(89, 36);
             this.btnMinizar3.TabIndex = 54;
@@ -267,7 +270,7 @@
             this.btnCerrar3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCerrar3.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar3.Image")));
-            this.btnCerrar3.Location = new System.Drawing.Point(458, 2);
+            this.btnCerrar3.Location = new System.Drawing.Point(459, 3);
             this.btnCerrar3.Name = "btnCerrar3";
             this.btnCerrar3.Size = new System.Drawing.Size(89, 36);
             this.btnCerrar3.TabIndex = 53;
@@ -318,7 +321,7 @@
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(279, 141);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(217, 30);
+            this.txtApellido.Size = new System.Drawing.Size(217, 26);
             this.txtApellido.TabIndex = 2;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -328,7 +331,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(279, 107);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(217, 30);
+            this.txtNombre.Size = new System.Drawing.Size(217, 26);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -351,7 +354,7 @@
             this.rdbOtro.AutoSize = true;
             this.rdbOtro.Location = new System.Drawing.Point(7, 100);
             this.rdbOtro.Name = "rdbOtro";
-            this.rdbOtro.Size = new System.Drawing.Size(71, 29);
+            this.rdbOtro.Size = new System.Drawing.Size(58, 24);
             this.rdbOtro.TabIndex = 11;
             this.rdbOtro.TabStop = true;
             this.rdbOtro.Text = "Otro";
@@ -362,7 +365,7 @@
             this.rdbMujer.AutoSize = true;
             this.rdbMujer.Location = new System.Drawing.Point(7, 65);
             this.rdbMujer.Name = "rdbMujer";
-            this.rdbMujer.Size = new System.Drawing.Size(82, 29);
+            this.rdbMujer.Size = new System.Drawing.Size(66, 24);
             this.rdbMujer.TabIndex = 10;
             this.rdbMujer.TabStop = true;
             this.rdbMujer.Text = "Mujer";
@@ -373,11 +376,32 @@
             this.rdbHombre.AutoSize = true;
             this.rdbHombre.Location = new System.Drawing.Point(7, 30);
             this.rdbHombre.Name = "rdbHombre";
-            this.rdbHombre.Size = new System.Drawing.Size(102, 29);
+            this.rdbHombre.Size = new System.Drawing.Size(84, 24);
             this.rdbHombre.TabIndex = 9;
             this.rdbHombre.TabStop = true;
             this.rdbHombre.Text = "Hombre";
             this.rdbHombre.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnCerrar3);
+            this.panel1.Controls.Add(this.btnMinizar3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(551, 45);
+            this.panel1.TabIndex = 59;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Registración";
             // 
             // FrmRegistro
             // 
@@ -386,13 +410,12 @@
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(551, 588);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.grpGenero);
             this.Controls.Add(this.pcbMostrar1);
             this.Controls.Add(this.pcbOcultar1);
             this.Controls.Add(this.pcbMostrar);
             this.Controls.Add(this.pcbOcultar);
-            this.Controls.Add(this.btnMinizar3);
-            this.Controls.Add(this.btnCerrar3);
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mskDni);
@@ -410,7 +433,7 @@
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblFechaNac);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -425,6 +448,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar1)).EndInit();
             this.grpGenero.ResumeLayout(false);
             this.grpGenero.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,5 +483,7 @@
         private System.Windows.Forms.RadioButton rdbOtro;
         private System.Windows.Forms.RadioButton rdbMujer;
         private System.Windows.Forms.RadioButton rdbHombre;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }
