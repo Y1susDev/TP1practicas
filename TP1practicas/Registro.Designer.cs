@@ -216,14 +216,15 @@
             // btnCrearCuenta
             // 
             this.btnCrearCuenta.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCuenta.Location = new System.Drawing.Point(48, 547);
             this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(445, 36);
             this.btnCrearCuenta.TabIndex = 12;
             this.btnCrearCuenta.Text = "Crear cuenta";
-            this.btnCrearCuenta.UseVisualStyleBackColor = true;
+            this.btnCrearCuenta.UseVisualStyleBackColor = false;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
             this.btnCrearCuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnCrearCuenta_KeyPress);
             // 
