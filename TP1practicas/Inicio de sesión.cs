@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -40,6 +41,16 @@ namespace TP1practicas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            string Cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory| Usuariosalgoritmos.accdb" ;
+            using (OleDbConnection conectarBase = new OleDbConnection(Cadena))
+            {
+                conectarBase.Open();
+                OleDbDataAdapter da;
+                DataTable dt;
+                conectarBase.Close();
+                conectarBase.Dispose();
+            }
+            
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text))
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
