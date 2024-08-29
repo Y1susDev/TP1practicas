@@ -49,6 +49,7 @@ namespace TP1practicas
                 DataTable dt;
                 conectarBase.Close();
                 conectarBase.Dispose();
+                //
             }
             
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text))
