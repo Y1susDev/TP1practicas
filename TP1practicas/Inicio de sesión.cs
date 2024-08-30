@@ -41,27 +41,32 @@ namespace TP1practicas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string Cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory| Usuariosalgoritmos.accdb";
-            string Consulta = "SELECT * from Tabla1 where usuario=? and contraseña=?";
+            string Cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb";
 
             string usuario = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
 
             using (OleDbConnection conectarBase = new OleDbConnection(Cadena))
             {
-                conectarBase.Open();
+                
                 OleDbDataAdapter da;
                 DataTable dt;
                 try
                 {
+                    conectarBase.Open();
+                    string Consulta = "SELECT COUNT (*) FROM Tabla1 WHERE usuario = ? AND contraseña = ?";
+
                     using (OleDbCommand miComando = new OleDbCommand(Consulta, conectarBase))
                     {
-                        miComando.Parameters.AddWithValue("usuario",usuario);
-                        miComando.Parameters.AddWithValue("contraseña",contraseña);
+                        miComando.Parameters.AddWithValue("@usuario", usuario);
+
+                        miComando.Parameters.AddWithValue("@contraseña", contraseña);
 
                         int resultado = (int)miComando.ExecuteScalar();
                         if (resultado > 0)
+                        {
                             MessageBox.Show("Inicio de sesion exitoso");
+                        }
                         else
                         {
                             MessageBox.Show("Nombre de usuario con contraseña no validos.");
