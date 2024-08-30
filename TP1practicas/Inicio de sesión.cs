@@ -41,17 +41,47 @@ namespace TP1practicas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string Cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory| Usuariosalgoritmos.accdb" ;
+            string Cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory| Usuariosalgoritmos.accdb";
+            string Consulta = "SELECT * from Tabla1 where usuario=? and contraseña=?";
+
+            string usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
+
             using (OleDbConnection conectarBase = new OleDbConnection(Cadena))
             {
                 conectarBase.Open();
                 OleDbDataAdapter da;
                 DataTable dt;
+                try
+                {
+                    using (OleDbCommand miComando = new OleDbCommand(Consulta, conectarBase))
+                    {
+                        miComando.Parameters.AddWithValue("usuario",usuario);
+                        miComando.Parameters.AddWithValue("contraseña",contraseña);
+
+                        int resultado = (int)miComando.ExecuteScalar();
+                        if (resultado > 0)
+                            MessageBox.Show("Inicio de sesion exitoso");
+                        else
+                        {
+                            MessageBox.Show("Nombre de usuario con contraseña no validos.");
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show( "Se produjo un error inesperado", ex.Message);
+                 
+                }
+
                 conectarBase.Close();
                 conectarBase.Dispose();
-                //
+                
+
             }
-            
+
+
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text))
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
