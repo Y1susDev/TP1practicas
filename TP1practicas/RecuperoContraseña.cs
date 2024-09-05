@@ -26,7 +26,7 @@ namespace TP1practicas
 
         private void btnEnviarCodigo_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text) || !mskFechaNacimiento.MaskFull || !mskDNI.MaskFull)
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text) || string.IsNullOrEmpty(txtEmail.Text) || !mskDNI.MaskFull)
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
             }
@@ -50,7 +50,7 @@ namespace TP1practicas
             else
             {
                 lblLeyenda.Visible = false;
-                txtNombre.Clear(); txtApellido.Clear(); mskFechaNacimiento.Clear(); mskDNI.Clear(); mskCodigoEnviado.Clear();
+                txtNombre.Clear(); txtApellido.Clear(); txtEmail.Clear(); mskDNI.Clear(); mskCodigoEnviado.Clear();
                 CrearCuenta = MessageBox.Show("¡Se ha restablecido su usuario/contraseña exitosamente! " +
                 "\n               Presione Aceptar para volver al menú", "",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -189,6 +189,11 @@ namespace TP1practicas
         private void lblIngreseCodigo_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }            

@@ -17,7 +17,6 @@ namespace TP1practicas
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new InicioSesion());
-            // comentario asdasd
         }
     }
 }

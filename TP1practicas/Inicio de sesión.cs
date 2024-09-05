@@ -41,62 +41,16 @@ namespace TP1practicas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string Cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb";
-
-            string usuario = txtUsuario.Text;
-            string contraseña = txtContraseña.Text;
-
-            using (OleDbConnection conectarBase = new OleDbConnection(Cadena))
-            {
-                
-                OleDbDataAdapter da;
-                DataTable dt;
-                try
-                {
-                    conectarBase.Open();
-                    string Consulta = "SELECT COUNT (*) FROM Tabla1 WHERE usuario = ? AND contraseña = ?";
-
-                    using (OleDbCommand miComando = new OleDbCommand(Consulta, conectarBase))
-                    {
-                        miComando.Parameters.AddWithValue("@usuario", usuario);
-
-                        miComando.Parameters.AddWithValue("@contraseña", contraseña);
-
-                        int resultado = (int)miComando.ExecuteScalar();
-                        if (resultado > 0)
-                        {
-                            MessageBox.Show("Inicio de sesion exitoso");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Nombre de usuario con contraseña no validos.");
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show( "Se produjo un error inesperado", ex.Message);
-                 
-                }
-
-                conectarBase.Close();
-                conectarBase.Dispose();
-                
-
-            }
-
 
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text))
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
                 lblLeyenda.Visible = true;
+                MessageBox.Show("¡No completo nombre de usuario y/o contraseña", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else 
             {
-                MessageBox.Show("¡Inicio de sesión exitoso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                lblLeyenda.Visible = false;
-                txtUsuario.Clear(); txtContraseña.Clear();
+                Validar_Credenciales(txtUsuario.Text, txtContraseña.Text);
             }
         }
         private void label1_Click(object sender, EventArgs e)
@@ -157,6 +111,46 @@ namespace TP1practicas
         private void lnkolvidocontraseña_TabStopChanged(object sender, EventArgs e)
         {
 
+        }
+        private void Validar_Credenciales(string usuario, string contraseña)
+        {
+            string Cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb";
+
+            using (OleDbConnection conectarBase = new OleDbConnection(Cadena))
+            {
+                try
+                {
+                    conectarBase.Open();
+                    string Consulta = "SELECT COUNT (*) FROM Tabla1 WHERE usuario = ? AND contraseña = ?";
+
+                    using (OleDbCommand miComando = new OleDbCommand(Consulta, conectarBase))
+                    {
+                        miComando.Parameters.AddWithValue("@usuario", usuario);
+
+                        miComando.Parameters.AddWithValue("@contraseña", contraseña);
+
+                        int resultado = (int)miComando.ExecuteScalar();
+                        if (resultado > 0)
+                        {
+                            MessageBox.Show("¡Inicio de sesión exitoso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            lblLeyenda.Visible = false;
+                            txtUsuario.Clear(); txtContraseña.Clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("¡Nombre de usuario y/o contraseña no validos!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Se produjo un ERROR al conectar a la base de datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+            }
         }
 
     }

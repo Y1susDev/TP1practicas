@@ -40,13 +40,13 @@
             this.lblLeyenda = new System.Windows.Forms.Label();
             this.lblIngreseCodigo = new System.Windows.Forms.Label();
             this.mskDNI = new System.Windows.Forms.MaskedTextBox();
-            this.mskFechaNacimiento = new System.Windows.Forms.MaskedTextBox();
             this.mskCodigoEnviado = new System.Windows.Forms.MaskedTextBox();
             this.lblInicieSesion = new System.Windows.Forms.Label();
             this.btnMinizar2 = new System.Windows.Forms.Button();
             this.btnCerrar2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,9 +123,9 @@
             this.lblFechaNac.Location = new System.Drawing.Point(184, 183);
             this.lblFechaNac.Margin = new System.Windows.Forms.Padding(3);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(157, 20);
+            this.lblFechaNac.Size = new System.Drawing.Size(140, 20);
             this.lblFechaNac.TabIndex = 12;
-            this.lblFechaNac.Text = "Fecha de nacimiento";
+            this.lblFechaNac.Text = "Correo Electronico";
             this.lblFechaNac.Click += new System.EventHandler(this.lblFechaNac_Click);
             // 
             // btnIngresarCodigo
@@ -146,6 +146,7 @@
             // 
             this.lblLeyenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLeyenda.ForeColor = System.Drawing.Color.Red;
             this.lblLeyenda.Location = new System.Drawing.Point(189, 308);
             this.lblLeyenda.Margin = new System.Windows.Forms.Padding(3);
             this.lblLeyenda.Name = "lblLeyenda";
@@ -177,19 +178,6 @@
             this.mskDNI.TabIndex = 4;
             this.mskDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskDNI.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskDNI_MaskInputRejected);
-            // 
-            // mskFechaNacimiento
-            // 
-            this.mskFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskFechaNacimiento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.mskFechaNacimiento.Location = new System.Drawing.Point(412, 180);
-            this.mskFechaNacimiento.Mask = "00/00/0000";
-            this.mskFechaNacimiento.Name = "mskFechaNacimiento";
-            this.mskFechaNacimiento.Size = new System.Drawing.Size(97, 26);
-            this.mskFechaNacimiento.TabIndex = 3;
-            this.mskFechaNacimiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mskFechaNacimiento.ValidatingType = typeof(System.DateTime);
-            this.mskFechaNacimiento.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskFechaNacimiento_MaskInputRejected);
             // 
             // mskCodigoEnviado
             // 
@@ -259,23 +247,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 53;
             this.label1.Text = "Recuperación";
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(412, 180);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(217, 26);
+            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // RecuperoContraseña
             // 
+            this.AcceptButton = this.btnEnviarCodigo;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(819, 444);
             this.ControlBox = false;
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblInicieSesion);
             this.Controls.Add(this.mskCodigoEnviado);
-            this.Controls.Add(this.mskFechaNacimiento);
             this.Controls.Add(this.mskDNI);
             this.Controls.Add(this.lblIngreseCodigo);
             this.Controls.Add(this.lblLeyenda);
@@ -315,12 +315,12 @@
         private System.Windows.Forms.Label lblLeyenda;
         private System.Windows.Forms.Label lblIngreseCodigo;
         private System.Windows.Forms.MaskedTextBox mskDNI;
-        private System.Windows.Forms.MaskedTextBox mskFechaNacimiento;
         private System.Windows.Forms.MaskedTextBox mskCodigoEnviado;
         private System.Windows.Forms.Button btnMinizar2;
         private System.Windows.Forms.Button btnCerrar2;
         private System.Windows.Forms.Label lblInicieSesion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }

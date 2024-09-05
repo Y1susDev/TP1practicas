@@ -135,6 +135,7 @@
             // 
             this.lblLeyenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLeyenda.ForeColor = System.Drawing.Color.Red;
             this.lblLeyenda.Location = new System.Drawing.Point(59, 252);
             this.lblLeyenda.Margin = new System.Windows.Forms.Padding(3);
             this.lblLeyenda.Name = "lblLeyenda";
@@ -223,14 +224,16 @@
             // lblMenu
             // 
             this.lblMenu.AutoSize = true;
+            this.lblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMenu.Location = new System.Drawing.Point(12, 15);
             this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(34, 13);
+            this.lblMenu.Size = new System.Drawing.Size(38, 13);
             this.lblMenu.TabIndex = 51;
             this.lblMenu.Text = "Menú";
             // 
             // InicioSesion
             // 
+            this.AcceptButton = this.btnIngresar;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Ivory;

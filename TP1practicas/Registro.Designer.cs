@@ -39,7 +39,6 @@
             this.lblContraseña2 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblContraseña1 = new System.Windows.Forms.Label();
-            this.mskFechaNac = new System.Windows.Forms.MaskedTextBox();
             this.mskDni = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@
             this.rdbHombre = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtNombreDeUsuario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar1)).BeginInit();
@@ -110,9 +110,9 @@
             this.lblFechaNac.Location = new System.Drawing.Point(43, 176);
             this.lblFechaNac.Margin = new System.Windows.Forms.Padding(3);
             this.lblFechaNac.Name = "lblFechaNac";
-            this.lblFechaNac.Size = new System.Drawing.Size(159, 20);
+            this.lblFechaNac.Size = new System.Drawing.Size(146, 20);
             this.lblFechaNac.TabIndex = 23;
-            this.lblFechaNac.Text = "Fecha de Nacimiento";
+            this.lblFechaNac.Text = "Nombre de Usuario";
             // 
             // txtContraseña2
             // 
@@ -179,17 +179,6 @@
             this.lblContraseña1.TabIndex = 34;
             this.lblContraseña1.Text = "Ingrese una contraseña";
             this.lblContraseña1.Click += new System.EventHandler(this.lblContraseña1_Click);
-            // 
-            // mskFechaNac
-            // 
-            this.mskFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskFechaNac.Location = new System.Drawing.Point(279, 173);
-            this.mskFechaNac.Mask = "00/00/0000";
-            this.mskFechaNac.Name = "mskFechaNac";
-            this.mskFechaNac.Size = new System.Drawing.Size(97, 26);
-            this.mskFechaNac.TabIndex = 3;
-            this.mskFechaNac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mskFechaNac.ValidatingType = typeof(System.DateTime);
             // 
             // mskDni
             // 
@@ -307,6 +296,7 @@
             // 
             this.lblLeyenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLeyenda.ForeColor = System.Drawing.Color.Red;
             this.lblLeyenda.Location = new System.Drawing.Point(48, 494);
             this.lblLeyenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLeyenda.Name = "lblLeyenda";
@@ -398,19 +388,31 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 55;
             this.label2.Text = "Registración";
             // 
+            // txtNombreDeUsuario
+            // 
+            this.txtNombreDeUsuario.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.txtNombreDeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreDeUsuario.Location = new System.Drawing.Point(279, 173);
+            this.txtNombreDeUsuario.Name = "txtNombreDeUsuario";
+            this.txtNombreDeUsuario.Size = new System.Drawing.Size(217, 26);
+            this.txtNombreDeUsuario.TabIndex = 3;
+            // 
             // FrmRegistro
             // 
+            this.AcceptButton = this.btnCrearCuenta;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(551, 588);
             this.ControlBox = false;
+            this.Controls.Add(this.txtNombreDeUsuario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grpGenero);
             this.Controls.Add(this.pcbMostrar1);
@@ -420,7 +422,6 @@
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mskDni);
-            this.Controls.Add(this.mskFechaNac);
             this.Controls.Add(this.lblLeyenda);
             this.Controls.Add(this.txtContraseña2);
             this.Controls.Add(this.txtContraseña1);
@@ -467,7 +468,6 @@
         private System.Windows.Forms.Label lblContraseña2;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblContraseña1;
-        private System.Windows.Forms.MaskedTextBox mskFechaNac;
         private System.Windows.Forms.MaskedTextBox mskDni;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCrearCuenta;
@@ -486,5 +486,6 @@
         private System.Windows.Forms.RadioButton rdbHombre;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtNombreDeUsuario;
     }
 }

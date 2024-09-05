@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
@@ -27,35 +28,27 @@ namespace TP1practicas
             string hombre = rdbHombre.Text;
             string mujer = rdbMujer.Text;
             string Otro = rdbOtro.Text;
-            DialogResult Resultado;
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
-            string fechanacimiento = mskFechaNac.Text;
+            string usuario = txtNombreDeUsuario.Text;
             string dni = mskDni.Text;
             string email = txtEmail.Text;
             string contraseña1 = txtContraseña1.Text;
             string contraseña2 = txtContraseña2.Text;
 
             if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text) ||
-                !mskFechaNac.MaskCompleted || !mskDni.MaskCompleted || string.IsNullOrEmpty(txtEmail.Text)
+                string.IsNullOrEmpty(txtNombreDeUsuario.Text) || !mskDni.MaskCompleted || string.IsNullOrEmpty(txtEmail.Text)
                 || string.IsNullOrEmpty(txtContraseña1.Text) || string.IsNullOrEmpty(txtContraseña2.Text) ||
                 !rdbHombre.Checked && !rdbMujer.Checked && !rdbOtro.Checked)
             {
                 lblLeyenda.Text = "Complete todos los campos";
+                MessageBox.Show("¡No completo algun campo!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                txtNombre.Clear(); txtApellido.Clear(); mskFechaNac.Clear(); mskDni.Clear(); txtEmail.Clear(); txtContraseña1.Clear(); txtContraseña2.Clear();
-                Resultado = MessageBox.Show("¡Su cuenta se ha creado exitosamente! \n Presione Aceptar para volver al menú", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (Resultado == DialogResult.OK)
-                {
-                    InicioSesion iniciosesion = new InicioSesion();
-                    iniciosesion.Show();
-                    this.Close();
-                }
+                registroUsuario(usuario, contraseña1, email);
             }
             lblLeyenda.Visible = true;
-            //CARGAMOS LA LISTA
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs nptNombre)
@@ -158,6 +151,54 @@ namespace TP1practicas
         private void lblLeyenda_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void registroUsuario(string usuario, string contraseña1, string email)
+        {
+            DialogResult Resultado;
+            string Cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb";
+
+            using (OleDbConnection conectarBase = new OleDbConnection(Cadena))
+            {
+                try
+                {
+                    string Consulta = "INSERT INTO Tabla1 (usuario, contraseña, correo_electronico) VALUES (?, ?, ?)";
+                    conectarBase.Open();
+                    using (OleDbCommand miComando = new OleDbCommand(Consulta, conectarBase))
+                    {
+                        miComando.Parameters.AddWithValue("@usuario", usuario);
+
+                        miComando.Parameters.AddWithValue("@contraseña", contraseña1);
+
+                        miComando.Parameters.AddWithValue("@correo_electronico", email);
+
+
+                        int resultado = miComando.ExecuteNonQuery();
+                        if (resultado > 0)
+                        {
+                            txtNombre.Clear(); txtApellido.Clear(); txtNombreDeUsuario.Clear(); mskDni.Clear(); txtEmail.Clear(); txtContraseña1.Clear(); txtContraseña2.Clear();
+                            Resultado = MessageBox.Show("¡Su cuenta se ha creado exitosamente! \n Presione en OK para volver al menú", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (Resultado == DialogResult.OK)
+                            {
+                                InicioSesion iniciosesion = new InicioSesion();
+                                iniciosesion.Show();
+                                this.Close();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("¡Nombre de usuario y/o contraseña no validos!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Se produjo un ERROR al conectar a la base de datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+            }
         }
     }
 }
