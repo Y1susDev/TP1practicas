@@ -41,6 +41,10 @@ namespace TP1practicas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            string usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
+
+            ConsultasGen consulta = new ConsultasGen("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb;");
 
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text))
             {
@@ -48,9 +52,23 @@ namespace TP1practicas
                 lblLeyenda.Visible = true;
                 MessageBox.Show("¡No completo nombre de usuario y/o contraseña", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else 
+            else
             {
-                Validar_Credenciales(txtUsuario.Text, txtContraseña.Text);
+                try
+                {
+                    if (consulta.ValidarUsuario(usuario, contraseña))
+                    {
+                        MessageBox.Show("¡Inicio de sesión exitoso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("¡Nombre de usuario y/o contraseña no validos!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Se produjo un ERROR al conectar a la base de datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void label1_Click(object sender, EventArgs e)
@@ -112,46 +130,46 @@ namespace TP1practicas
         {
 
         }
-        private void Validar_Credenciales(string usuario, string contraseña)
-        {
-            string Cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb";
+        //private void Validar_Credenciales(string usuario, string contraseña)
+        //{
+        //    string Cadena = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb";
 
-            using (OleDbConnection conectarBase = new OleDbConnection(Cadena))
-            {
-                try
-                {
-                    conectarBase.Open();
-                    string Consulta = "SELECT COUNT (*) FROM Tabla1 WHERE usuario = ? AND contraseña = ?";
+        //    using (OleDbConnection conectarBase = new OleDbConnection(Cadena))
+        //    {
+        //        try
+        //        {
+        //            conectarBase.Open();
+        //            string Consulta = "SELECT COUNT (*) FROM Tabla1 WHERE usuario = ? AND contraseña = ?";
 
-                    using (OleDbCommand miComando = new OleDbCommand(Consulta, conectarBase))
-                    {
-                        miComando.Parameters.AddWithValue("@usuario", usuario);
+        //            using (OleDbCommand miComando = new OleDbCommand(Consulta, conectarBase))
+        //            {
+        //                miComando.Parameters.AddWithValue("@usuario", usuario);
 
-                        miComando.Parameters.AddWithValue("@contraseña", contraseña);
+        //                miComando.Parameters.AddWithValue("@contraseña", contraseña);
 
-                        int resultado = (int)miComando.ExecuteScalar();
-                        if (resultado > 0)
-                        {
-                            MessageBox.Show("¡Inicio de sesión exitoso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            lblLeyenda.Visible = false;
-                            txtUsuario.Clear(); txtContraseña.Clear();
-                        }
-                        else
-                        {
-                            MessageBox.Show("¡Nombre de usuario y/o contraseña no validos!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
+        //                int resultado = (int)miComando.ExecuteScalar();
+        //                if (resultado > 0)
+        //                {
+        //                    MessageBox.Show("¡Inicio de sesión exitoso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                    lblLeyenda.Visible = false;
+        //                    txtUsuario.Clear(); txtContraseña.Clear();
+        //                }
+        //                else
+        //                {
+        //                    MessageBox.Show("¡Nombre de usuario y/o contraseña no validos!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //                }
+        //            }
 
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Se produjo un ERROR al conectar a la base de datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //        catch (Exception)
+        //        {
+        //            MessageBox.Show("Se produjo un ERROR al conectar a la base de datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
+        //        }
 
 
-            }
-        }
+        //    }
+        //}
 
     }
     
