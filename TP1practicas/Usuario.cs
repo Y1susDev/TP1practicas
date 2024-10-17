@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP1practicas
 {
-    internal class Personas
+    internal class Usuario
     {
         private string nombre;
         private string apellido;

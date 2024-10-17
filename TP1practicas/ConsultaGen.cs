@@ -5,17 +5,18 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace TP1practicas
 {
-    internal class ConsultasGen : Conexion
+    internal class ConsultaGen : Conexion
     {
 
         private OleDbCommand miComando;
         private OleDbDataAdapter dataAdapter;
         private DataTable dataTable;
 
-        public ConsultasGen(string cadenaConexion) : base(cadenaConexion)
+        public ConsultaGen(string cadenaConexion) : base(cadenaConexion)
         {
 
         }
@@ -38,6 +39,30 @@ namespace TP1practicas
             {
                 
                 throw new Exception("Error al validar usuario: " + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+        public bool AgregarUsuario(string usuario, string contraseña, string email)
+        {
+            try
+            {
+                Conectar();
+                string Consulta = "INSERT INTO Tabla1 (usuario, contraseña, correo_electronico ) VALUES (?, ?, ?)";
+                miComando = new OleDbCommand(Consulta, conectarBase);
+                miComando.Parameters.AddWithValue("?", usuario);
+                miComando.Parameters.AddWithValue("?", contraseña);
+                miComando.Parameters.AddWithValue("?", email);
+
+                int result = miComando.ExecuteNonQuery();
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al agregar usuario: " + ex.Message);
             }
             finally
             {

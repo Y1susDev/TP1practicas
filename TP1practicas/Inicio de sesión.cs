@@ -44,7 +44,7 @@ namespace TP1practicas
             string usuario = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
 
-            ConsultasGen consulta = new ConsultasGen("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb;");
+            ConsultaGen consulta = new ConsultaGen("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb;");
 
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text))
             {
