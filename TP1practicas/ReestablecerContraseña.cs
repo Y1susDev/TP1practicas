@@ -52,7 +52,9 @@ namespace TP1practicas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            RecuperoContraseña recupero = new RecuperoContraseña();
+            recupero.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,6 +85,11 @@ namespace TP1practicas
             txtConfirm2.PasswordChar = '*';
         }
         private void txtConfirm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConfirm2_TextChanged(object sender, EventArgs e)
         {
 
         }

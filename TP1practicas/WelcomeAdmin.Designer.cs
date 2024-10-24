@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMinizar2 = new System.Windows.Forms.Button();
-            this.btnCerrar2 = new System.Windows.Forms.Button();
             this.dtgCambios = new System.Windows.Forms.DataGridView();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.lblTipoUser = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnMinizar2 = new System.Windows.Forms.Button();
+            this.btnCerrar2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCambios)).BeginInit();
             this.SuspendLayout();
@@ -63,47 +63,22 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Administrador";
             // 
-            // btnMinizar2
-            // 
-            this.btnMinizar2.BackColor = System.Drawing.Color.LightCyan;
-            this.btnMinizar2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinizar2.Image = ((System.Drawing.Image)(resources.GetObject("btnMinizar2.Image")));
-            this.btnMinizar2.Location = new System.Drawing.Point(613, 3);
-            this.btnMinizar2.Name = "btnMinizar2";
-            this.btnMinizar2.Size = new System.Drawing.Size(89, 36);
-            this.btnMinizar2.TabIndex = 52;
-            this.btnMinizar2.TabStop = false;
-            this.btnMinizar2.UseVisualStyleBackColor = false;
-            // 
-            // btnCerrar2
-            // 
-            this.btnCerrar2.BackColor = System.Drawing.Color.MistyRose;
-            this.btnCerrar2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCerrar2.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar2.Image")));
-            this.btnCerrar2.Location = new System.Drawing.Point(708, 3);
-            this.btnCerrar2.Name = "btnCerrar2";
-            this.btnCerrar2.Size = new System.Drawing.Size(89, 36);
-            this.btnCerrar2.TabIndex = 51;
-            this.btnCerrar2.TabStop = false;
-            this.btnCerrar2.UseVisualStyleBackColor = false;
-            // 
             // dtgCambios
             // 
             this.dtgCambios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgCambios.Location = new System.Drawing.Point(209, 217);
+            this.dtgCambios.Location = new System.Drawing.Point(15, 204);
             this.dtgCambios.Name = "dtgCambios";
             this.dtgCambios.RowHeadersWidth = 51;
             this.dtgCambios.RowTemplate.Height = 24;
-            this.dtgCambios.Size = new System.Drawing.Size(372, 215);
+            this.dtgCambios.Size = new System.Drawing.Size(773, 234);
             this.dtgCambios.TabIndex = 56;
             this.dtgCambios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lblAdmin
             // 
             this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmin.Location = new System.Drawing.Point(170, 176);
+            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.Location = new System.Drawing.Point(170, 167);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(449, 25);
             this.lblAdmin.TabIndex = 57;
@@ -113,7 +88,7 @@
             // 
             this.lblTipoUser.AutoSize = true;
             this.lblTipoUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoUser.Location = new System.Drawing.Point(275, 125);
+            this.lblTipoUser.Location = new System.Drawing.Point(275, 123);
             this.lblTipoUser.Name = "lblTipoUser";
             this.lblTipoUser.Size = new System.Drawing.Size(246, 25);
             this.lblTipoUser.TabIndex = 58;
@@ -128,6 +103,33 @@
             this.lblWelcome.Size = new System.Drawing.Size(363, 39);
             this.lblWelcome.TabIndex = 59;
             this.lblWelcome.Text = "¡Bienvenido, \"USER\"!";
+            // 
+            // btnMinizar2
+            // 
+            this.btnMinizar2.BackColor = System.Drawing.Color.LightCyan;
+            this.btnMinizar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinizar2.Image = ((System.Drawing.Image)(resources.GetObject("btnMinizar2.Image")));
+            this.btnMinizar2.Location = new System.Drawing.Point(613, 3);
+            this.btnMinizar2.Name = "btnMinizar2";
+            this.btnMinizar2.Size = new System.Drawing.Size(89, 36);
+            this.btnMinizar2.TabIndex = 52;
+            this.btnMinizar2.TabStop = false;
+            this.btnMinizar2.UseVisualStyleBackColor = false;
+            this.btnMinizar2.Click += new System.EventHandler(this.btnMinizar2_Click);
+            // 
+            // btnCerrar2
+            // 
+            this.btnCerrar2.BackColor = System.Drawing.Color.MistyRose;
+            this.btnCerrar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCerrar2.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar2.Image")));
+            this.btnCerrar2.Location = new System.Drawing.Point(708, 3);
+            this.btnCerrar2.Name = "btnCerrar2";
+            this.btnCerrar2.Size = new System.Drawing.Size(89, 36);
+            this.btnCerrar2.TabIndex = 51;
+            this.btnCerrar2.TabStop = false;
+            this.btnCerrar2.UseVisualStyleBackColor = false;
+            this.btnCerrar2.Click += new System.EventHandler(this.btnCerrar2_Click);
             // 
             // WelcomeAdmin
             // 

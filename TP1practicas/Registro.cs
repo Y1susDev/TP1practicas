@@ -47,7 +47,7 @@ namespace TP1practicas
                 !rdbHombre.Checked && !rdbMujer.Checked && !rdbOtro.Checked)
             {
                 lblLeyenda.Text = "Complete todos los campos";
-                MessageBox.Show("¡No completo algun campo!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("¡No completó algún campo!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (string.IsNullOrEmpty(txtContraseña1.Text) || string.IsNullOrEmpty(txtContraseña2.Text))
             {

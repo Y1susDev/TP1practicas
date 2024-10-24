@@ -16,5 +16,25 @@ namespace TP1practicas
         {
             InitializeComponent();
         }
+
+        private void lblTipoUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinizar2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

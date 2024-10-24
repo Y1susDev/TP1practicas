@@ -52,6 +52,10 @@ namespace TP1practicas
                 lblLeyenda.Visible = true;
                 MessageBox.Show("¡No completó nombre de usuario y/o contraseña", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (contraseña.Length < 6)
+                {
+                MessageBox.Show("La contraseña no puede ser menor a 6 caracteres", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             else
             {
                 try
