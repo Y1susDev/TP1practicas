@@ -69,5 +69,31 @@ namespace TP1practicas
                 Desconectar();
             }
         }
+
+        public bool ValidarUsuarioMail(string usuario, string mail)
+        {
+            try
+            {
+                Conectar();
+                string Consulta = "SELECT COUNT (*) FROM Tabla1 WHERE usuario = ? AND correo_electronico = ?";
+
+                miComando = new OleDbCommand(Consulta, conectarBase);
+                miComando.Parameters.AddWithValue("@usuario", usuario);
+                miComando.Parameters.AddWithValue("@correo_electronico", mail);
+
+                int resultado = (int)miComando.ExecuteScalar();
+                return resultado > 0;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al validar usuario: " + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
     }
 }

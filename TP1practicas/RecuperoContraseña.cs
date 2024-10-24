@@ -26,16 +26,34 @@ namespace TP1practicas
 
         private void btnEnviarCodigo_Click(object sender, EventArgs e)
         {
+            string usuario = txtUsuario.Text;
+            string mail = txtEmail.Text;
 
+            ConsultaGen consulta = new ConsultaGen("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb;");
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtEmail.Text) || !mskDNI.MaskFull)
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
             }
             else
             {
-                lblLeyenda.Text = ("Un código ha sido enviado a su correo electrónico");
-                txtCodigo.Enabled = true;
-                btnIngresarCodigo.Enabled = true;
+                try
+                {
+                    if (consulta.ValidarUsuarioMail(usuario, mail))
+                    {
+                        lblLeyenda.Text = ("Un código ha sido enviado a su correo electrónico");
+                        txtCodigo.Enabled = true;
+                        btnIngresarCodigo.Enabled = true;
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("¡Nombre de usuario y/o Correo no validos!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Se produjo un ERROR al conectar a la base de datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             lblLeyenda.Visible = true;
