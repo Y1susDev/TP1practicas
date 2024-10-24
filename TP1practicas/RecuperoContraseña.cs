@@ -219,6 +219,11 @@ namespace TP1practicas
         {
 
         }
+
+        private void lblInicieSesion_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }            
         

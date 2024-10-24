@@ -48,8 +48,6 @@ namespace TP1practicas
 
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text))
             {
-                lblLeyenda.Text = ("Debe completar todos los campos");
-                lblLeyenda.Visible = true;
                 MessageBox.Show("¡No completó nombre de usuario y/o contraseña", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (contraseña.Length < 6)
@@ -75,11 +73,6 @@ namespace TP1practicas
                 }
             }
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lnkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FrmRegistro Registro = new FrmRegistro();

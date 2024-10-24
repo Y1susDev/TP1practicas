@@ -46,7 +46,6 @@ namespace TP1practicas
                 || string.IsNullOrEmpty(txtContraseña1.Text) || string.IsNullOrEmpty(txtContraseña2.Text) ||
                 !rdbHombre.Checked && !rdbMujer.Checked && !rdbOtro.Checked)
             {
-                lblLeyenda.Text = "Complete todos los campos";
                 MessageBox.Show("¡No completó algún campo!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (string.IsNullOrEmpty(txtContraseña1.Text) || string.IsNullOrEmpty(txtContraseña2.Text))
@@ -87,7 +86,6 @@ namespace TP1practicas
                     MessageBox.Show("Se produjo un ERROR al conectar a la base de datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            lblLeyenda.Visible = true;
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs nptNombre)
@@ -187,22 +185,17 @@ namespace TP1practicas
 
         }
 
-        private void lblLeyenda_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void mskDni_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void txtContraseña1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtContraseña1_TextChanged(object sender, EventArgs e)
+        private void lblLeyenda_Click_1(object sender, EventArgs e)
         {
 
         }

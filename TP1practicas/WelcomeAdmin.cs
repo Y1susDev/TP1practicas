@@ -31,5 +31,13 @@ namespace TP1practicas
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            InicioSesion iniciosesion = new InicioSesion();
+            iniciosesion.Show();
+            this.Close();
+            MessageBox.Show("Has cerrado sesión exitosamente", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

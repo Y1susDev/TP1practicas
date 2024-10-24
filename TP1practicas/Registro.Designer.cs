@@ -42,7 +42,6 @@
             this.mskDni = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
-            this.lblLeyenda = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.grpGenero = new System.Windows.Forms.GroupBox();
@@ -52,6 +51,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreDeUsuario = new System.Windows.Forms.TextBox();
+            this.pctLibreta = new System.Windows.Forms.PictureBox();
+            this.pctHojas = new System.Windows.Forms.PictureBox();
+            this.pctLapiz = new System.Windows.Forms.PictureBox();
             this.btnCerrar3 = new System.Windows.Forms.Button();
             this.btnMinizar3 = new System.Windows.Forms.Button();
             this.pcbMostrar1 = new System.Windows.Forms.PictureBox();
@@ -60,6 +62,9 @@
             this.pcbOcultar = new System.Windows.Forms.PictureBox();
             this.grpGenero.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLibreta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctHojas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLapiz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar)).BeginInit();
@@ -133,7 +138,6 @@
             this.txtContraseña1.PasswordChar = '*';
             this.txtContraseña1.Size = new System.Drawing.Size(181, 30);
             this.txtContraseña1.TabIndex = 6;
-            this.txtContraseña1.TextChanged += new System.EventHandler(this.txtContraseña1_TextChanged);
             // 
             // txtEmail
             // 
@@ -190,7 +194,6 @@
             this.mskDni.Size = new System.Drawing.Size(97, 30);
             this.mskDni.TabIndex = 4;
             this.mskDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mskDni.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskDni_MaskInputRejected);
             // 
             // label1
             // 
@@ -209,7 +212,7 @@
             this.btnCrearCuenta.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.btnCrearCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCuenta.Location = new System.Drawing.Point(48, 547);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(48, 489);
             this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(445, 36);
@@ -218,20 +221,6 @@
             this.btnCrearCuenta.UseVisualStyleBackColor = false;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
             this.btnCrearCuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnCrearCuenta_KeyPress);
-            // 
-            // lblLeyenda
-            // 
-            this.lblLeyenda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblLeyenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeyenda.ForeColor = System.Drawing.Color.Red;
-            this.lblLeyenda.Location = new System.Drawing.Point(48, 494);
-            this.lblLeyenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLeyenda.Name = "lblLeyenda";
-            this.lblLeyenda.Size = new System.Drawing.Size(445, 36);
-            this.lblLeyenda.TabIndex = 41;
-            this.lblLeyenda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblLeyenda.Visible = false;
-            this.lblLeyenda.Click += new System.EventHandler(this.lblLeyenda_Click);
             // 
             // txtApellido
             // 
@@ -332,13 +321,43 @@
             this.txtNombreDeUsuario.Size = new System.Drawing.Size(217, 30);
             this.txtNombreDeUsuario.TabIndex = 3;
             // 
+            // pctLibreta
+            // 
+            this.pctLibreta.Image = global::TP1practicas.Properties.Resources.libreta1;
+            this.pctLibreta.Location = new System.Drawing.Point(443, 538);
+            this.pctLibreta.Name = "pctLibreta";
+            this.pctLibreta.Size = new System.Drawing.Size(50, 50);
+            this.pctLibreta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctLibreta.TabIndex = 62;
+            this.pctLibreta.TabStop = false;
+            // 
+            // pctHojas
+            // 
+            this.pctHojas.Image = global::TP1practicas.Properties.Resources.papel1;
+            this.pctHojas.Location = new System.Drawing.Point(247, 538);
+            this.pctHojas.Name = "pctHojas";
+            this.pctHojas.Size = new System.Drawing.Size(50, 50);
+            this.pctHojas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctHojas.TabIndex = 61;
+            this.pctHojas.TabStop = false;
+            // 
+            // pctLapiz
+            // 
+            this.pctLapiz.Image = global::TP1practicas.Properties.Resources.lapiz1;
+            this.pctLapiz.Location = new System.Drawing.Point(48, 538);
+            this.pctLapiz.Name = "pctLapiz";
+            this.pctLapiz.Size = new System.Drawing.Size(50, 50);
+            this.pctLapiz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctLapiz.TabIndex = 60;
+            this.pctLapiz.TabStop = false;
+            // 
             // btnCerrar3
             // 
             this.btnCerrar3.BackColor = System.Drawing.Color.MistyRose;
             this.btnCerrar3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCerrar3.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar3.Image")));
-            this.btnCerrar3.Location = new System.Drawing.Point(459, 3);
+            this.btnCerrar3.Location = new System.Drawing.Point(459, 4);
             this.btnCerrar3.Name = "btnCerrar3";
             this.btnCerrar3.Size = new System.Drawing.Size(89, 36);
             this.btnCerrar3.TabIndex = 53;
@@ -351,7 +370,7 @@
             this.btnMinizar3.BackColor = System.Drawing.Color.LightCyan;
             this.btnMinizar3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinizar3.Image = ((System.Drawing.Image)(resources.GetObject("btnMinizar3.Image")));
-            this.btnMinizar3.Location = new System.Drawing.Point(366, 3);
+            this.btnMinizar3.Location = new System.Drawing.Point(366, 4);
             this.btnMinizar3.Name = "btnMinizar3";
             this.btnMinizar3.Size = new System.Drawing.Size(89, 36);
             this.btnMinizar3.TabIndex = 54;
@@ -413,8 +432,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(551, 588);
+            this.ClientSize = new System.Drawing.Size(551, 604);
             this.ControlBox = false;
+            this.Controls.Add(this.pctLibreta);
+            this.Controls.Add(this.pctHojas);
+            this.Controls.Add(this.pctLapiz);
             this.Controls.Add(this.txtNombreDeUsuario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grpGenero);
@@ -425,7 +447,6 @@
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mskDni);
-            this.Controls.Add(this.lblLeyenda);
             this.Controls.Add(this.txtContraseña2);
             this.Controls.Add(this.txtContraseña1);
             this.Controls.Add(this.txtEmail);
@@ -451,6 +472,9 @@
             this.grpGenero.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLibreta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctHojas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLapiz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOcultar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMostrar)).EndInit();
@@ -480,7 +504,6 @@
         private System.Windows.Forms.PictureBox pcbMostrar;
         private System.Windows.Forms.PictureBox pcbMostrar1;
         private System.Windows.Forms.PictureBox pcbOcultar1;
-        private System.Windows.Forms.Label lblLeyenda;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.GroupBox grpGenero;
@@ -490,5 +513,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombreDeUsuario;
+        private System.Windows.Forms.PictureBox pctLapiz;
+        private System.Windows.Forms.PictureBox pctHojas;
+        private System.Windows.Forms.PictureBox pctLibreta;
     }
 }
