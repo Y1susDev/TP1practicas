@@ -62,14 +62,14 @@ namespace TP1practicas
         private void btnIngresarCodigo_Click(object sender, EventArgs e)
         {
             int codigo;
-
+            string usuario = txtUsuario.Text;
             if (int.TryParse(txtCodigo.Text, out codigo))
             {
                 if (codigo == 01234)
                 {
                     lblLeyenda.Visible = false;
                     txtUsuario.Clear(); txtEmail.Clear(); mskDNI.Clear();
-                    ReestablecerContraseña reestablecer = new ReestablecerContraseña();
+                    ReestablecerContraseña reestablecer = new ReestablecerContraseña(usuario);
                     reestablecer.Show();
                     this.Close();
                 }

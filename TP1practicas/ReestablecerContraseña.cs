@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TP1practicas
 {
     public partial class ReestablecerContraseña : Form
     {
-        public ReestablecerContraseña()
+        private string usuario;
+        public ReestablecerContraseña(string usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
         }
 
         private void ReestablecerContraseña_Load(object sender, EventArgs e)
@@ -32,6 +35,9 @@ namespace TP1practicas
             string password1 = txtConfirm.Text;
             string password2 = txtConfirm2.Text;
 
+            DialogResult Resultado;
+            ConsultaGen consulta = new ConsultaGen("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb;");
+
             if (string.IsNullOrEmpty(txtConfirm.Text) || string.IsNullOrEmpty(txtConfirm2.Text))
             {
                 MessageBox.Show("¡Debe completar todos los campos!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -46,7 +52,29 @@ namespace TP1practicas
             }
             else if (txtConfirm.Text == txtConfirm2.Text)
             {
-                MessageBox.Show("¡Se ha restablecido su contraseña exitosamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    bool resultado = consulta.RestablecerPass(password1, usuario);
+                    if (resultado)
+                    {
+                        txtConfirm.Clear(); txtConfirm2.Clear();
+                        Resultado = MessageBox.Show("¡Se ha restablecido su contraseña exitosamente!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (Resultado == DialogResult.OK)
+                        {
+                            InicioSesion iniciosesion = new InicioSesion();
+                            iniciosesion.Show();
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("¡Ocurrio un error no se pudo restablecer la contreña!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Se produjo un ERROR al conectar a la base de datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

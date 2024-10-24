@@ -88,7 +88,30 @@ namespace TP1practicas
             catch (Exception ex)
             {
 
-                throw new Exception("Error al validar usuario: " + ex.Message);
+                throw new Exception("Error al validar usuario y/o correo: " + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+        public bool RestablecerPass(string contraseña, string usuario)
+        {
+            try
+            {
+                Conectar();
+                string Consulta = "UPDATE Tabla1 SET contraseña = ? WHERE usuario = ?";
+                miComando = new OleDbCommand(Consulta, conectarBase);
+                miComando.Parameters.AddWithValue("?", contraseña);
+                miComando.Parameters.AddWithValue("?", usuario);
+
+                int result = miComando.ExecuteNonQuery();
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al restablecer la contraseña: " + ex.Message);
             }
             finally
             {
