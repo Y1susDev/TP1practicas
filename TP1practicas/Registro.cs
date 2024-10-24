@@ -38,6 +38,9 @@ namespace TP1practicas
             DialogResult Resultado;
             ConsultaGen consulta = new ConsultaGen("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|Usuariosalgoritmos.accdb;");
 
+            string password1 = txtContraseña1.Text;
+            string password2 = txtContraseña2.Text;
+
             if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text) ||
                 string.IsNullOrEmpty(txtNombreDeUsuario.Text) || !mskDni.MaskCompleted || string.IsNullOrEmpty(txtEmail.Text)
                 || string.IsNullOrEmpty(txtContraseña1.Text) || string.IsNullOrEmpty(txtContraseña2.Text) ||
@@ -45,6 +48,18 @@ namespace TP1practicas
             {
                 lblLeyenda.Text = "Complete todos los campos";
                 MessageBox.Show("¡No completo algun campo!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrEmpty(txtContraseña1.Text) || string.IsNullOrEmpty(txtContraseña2.Text))
+            {
+                MessageBox.Show("¡Debe completar todos los campos!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txtContraseña1.Text != txtContraseña2.Text)
+            {
+                MessageBox.Show("¡Las contraseñas deben ser iguales!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (password1.Length < 6 || password2.Length < 6)
+            {
+                MessageBox.Show("La contraseña no puede ser menor a 6 caracteres", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -173,6 +188,21 @@ namespace TP1practicas
         }
 
         private void lblLeyenda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mskDni_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtContraseña1_TextChanged(object sender, EventArgs e)
         {
 
         }

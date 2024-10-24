@@ -26,14 +26,15 @@ namespace TP1practicas
 
         private void btnEnviarCodigo_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text) || string.IsNullOrEmpty(txtEmail.Text) || !mskDNI.MaskFull)
+
+            if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtEmail.Text) || !mskDNI.MaskFull)
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
             }
             else
             {
                 lblLeyenda.Text = ("Un código ha sido enviado a su correo electrónico");
-                mskCodigoEnviado.Enabled = true;
+                txtCodigo.Enabled = true;
                 btnIngresarCodigo.Enabled = true;
             }
 
@@ -42,26 +43,27 @@ namespace TP1practicas
 
         private void btnIngresarCodigo_Click(object sender, EventArgs e)
         {
-            DialogResult CrearCuenta;
-            if (!mskCodigoEnviado.MaskFull)
+            int codigo;
+
+            if (int.TryParse(txtCodigo.Text, out codigo))
             {
-                MessageBox.Show("Complete el campo","", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                lblLeyenda.Visible = false;
-                txtNombre.Clear(); txtApellido.Clear(); txtEmail.Clear(); mskDNI.Clear(); mskCodigoEnviado.Clear();
-                CrearCuenta = MessageBox.Show("¡Se ha restablecido su usuario/contraseña exitosamente! " +
-                "\n               Presione Aceptar para volver al menú", "",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (CrearCuenta == DialogResult.OK)
+                if (codigo == 01234)
                 {
-                    InicioSesion iniciosesion = new InicioSesion();
-                    iniciosesion.Show();
+                    lblLeyenda.Visible = false;
+                    txtUsuario.Clear(); txtEmail.Clear(); mskDNI.Clear();
+                    ReestablecerContraseña reestablecer = new ReestablecerContraseña();
+                    reestablecer.Show();
                     this.Close();
                 }
-                
+                else MessageBox.Show("El código es incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
+            else if (string.IsNullOrEmpty(txtCodigo.Text))
+            {
+                MessageBox.Show("El campo no puede estar vacío", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else MessageBox.Show("El campo no puede contener letras", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
 
         private void lblRecContraseña_Click(object sender, EventArgs e)
@@ -192,6 +194,26 @@ namespace TP1practicas
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblApellido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }

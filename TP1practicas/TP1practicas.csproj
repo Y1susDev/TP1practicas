@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="ConsultaGen.cs" />
+    <Compile Include="ReestablecerContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReestablecerContraseña.Designer.cs">
+      <DependentUpon>ReestablecerContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -74,6 +80,9 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReestablecerContraseña.resx">
+      <DependentUpon>ReestablecerContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio de sesión.resx">
       <DependentUpon>Inicio de sesión.cs</DependentUpon>
     </EmbeddedResource>
