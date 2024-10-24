@@ -50,7 +50,7 @@ namespace TP1practicas
             {
                 lblLeyenda.Text = ("Debe completar todos los campos");
                 lblLeyenda.Visible = true;
-                MessageBox.Show("¡No completo nombre de usuario y/o contraseña", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("¡No completó nombre de usuario y/o contraseña", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

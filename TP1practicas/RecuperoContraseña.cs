@@ -106,43 +106,27 @@ namespace TP1practicas
 
         }
 
-        private void txtApellidoKey(object sender, KeyPressEventArgs ApellidoKey)
+        private void txtUsuarioKey(object sender, KeyPressEventArgs UserKey)
         {
-            if (Char.IsLetter(ApellidoKey.KeyChar))
+            if (Char.IsLetter(UserKey.KeyChar))
             {
-                ApellidoKey.Handled = false;
+                UserKey.Handled = false;
             }
-            else if (Char.IsSeparator(ApellidoKey.KeyChar))
+            else if (Char.IsSeparator(UserKey.KeyChar))
             {
-                ApellidoKey.Handled = false;
+                UserKey.Handled = true;
             }
-            else if (Char.IsControl(ApellidoKey.KeyChar))
+            else if (Char.IsControl(UserKey.KeyChar))
             {
-                ApellidoKey.Handled = false;
+                UserKey.Handled = false;
+            }
+            else if (Char.IsNumber(UserKey.KeyChar))
+            {
+                UserKey.Handled = false;
             }
             else
             {
-                ApellidoKey.Handled = true;
-            }
-        }
-
-        private void txtNombreKey(object sender, KeyPressEventArgs NombreKey)
-        {
-            if (Char.IsLetter(NombreKey.KeyChar))
-            {
-                NombreKey.Handled = false;
-            }
-            else if (Char.IsSeparator(NombreKey.KeyChar))
-            {
-                NombreKey.Handled = false;
-            }
-            else if (Char.IsControl(NombreKey.KeyChar))
-            {
-                NombreKey.Handled = false;
-            }
-            else
-            {
-                NombreKey.Handled = true;
+                UserKey.Handled = true;
             }
         }
 

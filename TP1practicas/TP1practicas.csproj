@@ -80,6 +80,18 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="WelcomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeAdmin.Designer.cs">
+      <DependentUpon>WelcomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeUser.Designer.cs">
+      <DependentUpon>WelcomeUser.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ReestablecerContraseña.resx">
       <DependentUpon>ReestablecerContraseña.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeAdmin.resx">
+      <DependentUpon>WelcomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

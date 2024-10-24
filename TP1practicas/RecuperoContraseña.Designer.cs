@@ -41,10 +41,10 @@
             this.lblInicieSesion = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnMinizar2 = new System.Windows.Forms.Button();
             this.btnCerrar2 = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             this.btnEnviarCodigo.Location = new System.Drawing.Point(189, 257);
             this.btnEnviarCodigo.Name = "btnEnviarCodigo";
             this.btnEnviarCodigo.Size = new System.Drawing.Size(440, 36);
-            this.btnEnviarCodigo.TabIndex = 5;
+            this.btnEnviarCodigo.TabIndex = 4;
             this.btnEnviarCodigo.Text = "Enviar código";
             this.btnEnviarCodigo.UseVisualStyleBackColor = true;
             this.btnEnviarCodigo.Click += new System.EventHandler(this.btnEnviarCodigo_Click);
@@ -68,7 +68,7 @@
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreKey);
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuarioKey);
             // 
             // lblDni
             // 
@@ -115,7 +115,7 @@
             this.btnIngresarCodigo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.btnIngresarCodigo.Name = "btnIngresarCodigo";
             this.btnIngresarCodigo.Size = new System.Drawing.Size(440, 36);
-            this.btnIngresarCodigo.TabIndex = 7;
+            this.btnIngresarCodigo.TabIndex = 6;
             this.btnIngresarCodigo.Text = "Aceptar";
             this.btnIngresarCodigo.UseVisualStyleBackColor = false;
             this.btnIngresarCodigo.Click += new System.EventHandler(this.btnIngresarCodigo_Click);
@@ -153,7 +153,7 @@
             this.mskDNI.Mask = "00.000.000";
             this.mskDNI.Name = "mskDNI";
             this.mskDNI.Size = new System.Drawing.Size(97, 30);
-            this.mskDNI.TabIndex = 4;
+            this.mskDNI.TabIndex = 3;
             this.mskDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mskDNI.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskDNI_MaskInputRejected);
             // 
@@ -192,26 +192,6 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Recuperación";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(412, 163);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(217, 30);
-            this.txtEmail.TabIndex = 3;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(410, 361);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(217, 30);
-            this.txtCodigo.TabIndex = 55;
-            this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCodigo.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
             // btnMinizar2
             // 
             this.btnMinizar2.BackColor = System.Drawing.Color.LightCyan;
@@ -238,6 +218,26 @@
             this.btnCerrar2.TabStop = false;
             this.btnCerrar2.UseVisualStyleBackColor = false;
             this.btnCerrar2.Click += new System.EventHandler(this.btnCerrar2_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(412, 163);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(217, 30);
+            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(410, 361);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(217, 30);
+            this.txtCodigo.TabIndex = 5;
+            this.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // RecuperoContraseña
             // 
